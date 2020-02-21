@@ -17,7 +17,7 @@
   },
   "preconstruct": {
     "packages": [
-      "packages/*"
+      "packages/*", "!packages/docs"
     ]
   },
   "scripts": {
