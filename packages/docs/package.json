@@ -17,8 +17,7 @@
   "dependencies": {},
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "chromatic:rebase": "chromatic --auto-accept-changes",
+    "build-storybook": "build-storybook --quiet",
     "chromatic": "chromatic --exit-zero-on-changes"
   }
 }
