@@ -1,0 +1,27 @@
+{
+  "name": "react-tree",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kenshoo/react-tree.git",
+  "author": "ui@kenshoo.com",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@preconstruct/cli": "^1.1.7"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "postinstall": "preconstruct dev",
+    "release": "preconstruct build"
+  }
+}
