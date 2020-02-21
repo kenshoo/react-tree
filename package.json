@@ -14,7 +14,12 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "@preconstruct/cli": "^1.1.7",
-    "prettier": "1.19.1"
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "jest": "^25.1.0",
+    "prettier": "1.19.1",
+    "react": "^16.12.0"
   },
   "preconstruct": {
     "packages": [
@@ -22,11 +27,17 @@
       "!packages/docs"
     ]
   },
+  "jest": {
+    "moduleDirectories": ["node_modules"],
+    "setupFiles": [
+      "./enzyme.config.js"
+    ]
+  },
   "scripts": {
     "postinstall": "preconstruct dev",
     "build": "preconstruct build",
     "release": "preconstruct build",
-    "test": "echo skip",
+    "test": "jest",
     "prettier": "prettier --check ./packages/**/*.js --ignore-path .gitignore",
     "prettier:fix": "prettier --check ./packages/**/*.js --ignore-path .gitignore --write"
   }

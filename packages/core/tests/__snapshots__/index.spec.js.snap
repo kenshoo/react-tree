@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`core component will render 1`] = `
+<div>
+  HelloWorld
+</div>
+`;
