@@ -25,6 +25,7 @@
   "scripts": {
     "postinstall": "preconstruct dev",
     "release": "preconstruct build",
+    "test": "echo skip",
     "prettier": "prettier --check ./packages/**/*.js --ignore-path .gitignore",
     "prettier:fix": "prettier --check ./packages/**/*.js --ignore-path .gitignore --write"
   }
