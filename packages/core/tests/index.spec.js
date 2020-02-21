@@ -6,6 +6,6 @@ import toJson from "enzyme-to-json";
 describe("core component", () => {
   test("will render", () => {
     const cmp = shallow(<HelloWorld />);
-    expect(toJson((cmp))).toMatchSnapshot();
+    expect(toJson(cmp)).toMatchSnapshot();
   });
 });
