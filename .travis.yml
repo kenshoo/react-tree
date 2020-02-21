@@ -3,24 +3,18 @@ node_js:
   - "12"
 cache: yarn
 
-jobs:
-  include:
-    - stage: Tests
-      script:
-        - yarn prettier
-        - yarn test
-    - stage: Build
-      script: yarn build
-    - stage: Chromatic
-      script:
-        - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
-        - if [ "$BRANCH" == "master" ];
-          then
-            yarn workspace @kenshooui/react-tree-docs chromatic --auto-accept-changes;
-          elif [[ $TRAVIS_EVENT_TYPE != 'pull_request' ||  $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]];
-          then
-            yarn workspace @kenshooui/react-tree-docs chromatic;
-          fi
+script:
+  - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
+  - yarn prettier
+  - yarn test
+  - yarn build
+  - if [ "$BRANCH" == "master" ];
+    then
+      yarn workspace @kenshooui/react-tree-docs chromatic --auto-accept-changes;
+    elif [[ $TRAVIS_EVENT_TYPE != 'pull_request' ||  $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]];
+    then
+      yarn workspace @kenshooui/react-tree-docs chromatic;
+    fi
 
 deploy:
   - provider: script
