@@ -19,6 +19,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "jest": "^25.1.0",
+    "jest-junit": "^10.0.0",
     "prettier": "1.19.1",
     "react": "^16.12.0"
   },
@@ -34,12 +35,16 @@
     ],
     "setupFiles": [
       "./enzyme.config.js"
+    ],
+    "reporters": [ "default", "jest-junit" ],
+    "collectCoverageFrom": [
+      "./packages/**/src/**/*.{js,jsx}"
     ]
   },
   "scripts": {
     "postinstall": "preconstruct dev",
     "build": "preconstruct build",
-    "test": "jest",
+    "test": "jest --coverage",
     "prettier": "prettier --check ./packages/**/*.js --ignore-path .gitignore",
     "prettier:fix": "prettier --check ./packages/**/*.js --ignore-path .gitignore --write"
   }
