@@ -25,7 +25,7 @@ before_deploy:
   - git config --local user.name "${GIT_NAME}"
   - git config --local user.email "${GIT_EMAIL}"
   - git remote rm origin
-  - git remote add origin https://${GIT_NAME}@github.com/kenshoo/react-tree.git
+  - git remote add origin https://${GH_USER}@github.com/kenshoo/react-tree.git
   - git fetch origin --tags
   - git checkout master && git pull origin master
   - git branch --set-upstream-to origin/master master
@@ -35,5 +35,3 @@ deploy:
   - provider: script
     script: yarn workspace @kenshooui/react-tree release
     skip-cleanup: true
-    on:
-      all_branches: true
