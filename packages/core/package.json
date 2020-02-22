@@ -14,5 +14,10 @@
   },
   "scripts": {
     "release": "auto shipit"
+  },
+  "auto": {
+    "plugins": [
+      "npm"
+    ]
   }
 }
