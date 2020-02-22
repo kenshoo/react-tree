@@ -3,6 +3,11 @@ node_js:
   - "12"
 cache: yarn
 
+env:
+  global:
+    - GIT_NAME="uikenshoo"
+    - GIT_EMAIL="ui@kenshoo.com"
+
 script:
   - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
   - yarn prettier
@@ -16,7 +21,13 @@ script:
       yarn workspace @kenshooui/react-tree-docs chromatic;
     fi
 
+before_deploy:
+  - git config --local user.name "${GIT_NAME}"
+  - git config --local user.email "${GIT_EMAIL}"
+
 deploy:
   - provider: script
     script: yarn workspace @kenshooui/react-tree release
     skip-cleanup: true
+    on:
+      all_branches: true
