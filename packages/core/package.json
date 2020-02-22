@@ -1,6 +1,6 @@
 {
   "name": "@kenshooui/react-tree",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/react-tree.cjs.js",
   "module": "dist/react-tree.esm.js",
   "repository": "https://github.com/kenshoo/react-tree.git",
