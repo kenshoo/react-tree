@@ -17,8 +17,7 @@
   },
   "auto": {
     "plugins": [
-      "npm",
-      "git-tag"
+      "npm"
     ]
   }
 }
