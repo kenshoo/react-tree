@@ -39,3 +39,4 @@ const structure = [
 | `title`             | `String`  | ``                     | `Title to be displayed on root mode`                            |
 | `onSelect`          | `Func`    | ``                     | `callback when clicking a leaf`                                 |
 | `NoResultsRenderer` | ``        | `no_matching_items.js` | `renderer when having no results on searching`                  |
+
