@@ -30,10 +30,10 @@ after_success:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 before_deploy:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+  - if [ "$BRANCH" == "master" ]; then
       git checkout master;
     fi;
-  
+
 deploy:
   - provider: script
     script: if [ "$GH_TOKEN" != "false" ]; then npx auto shipit; fi;
