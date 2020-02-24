@@ -20,6 +20,7 @@
     "enzyme-to-json": "^3.4.4",
     "jest": "^25.1.0",
     "jest-junit": "^10.0.0",
+    "lerna": "^3.20.2",
     "prettier": "1.19.1",
     "react": "^16.12.0"
   },
@@ -36,7 +37,10 @@
     "setupFiles": [
       "./enzyme.config.js"
     ],
-    "reporters": [ "default", "jest-junit" ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
     "collectCoverageFrom": [
       "./packages/**/src/**/*.{js,jsx}"
     ]
