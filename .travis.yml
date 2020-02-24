@@ -29,15 +29,14 @@ script:
 after_success:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
+before_deploy:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      git checkout master;
+    fi;
+  
 deploy:
   - provider: script
-    script:
-      if [ "$NPM_TOKEN" != "false" ]; then
-        if [ "$TRAVIS_BRANCH" == "master" ]; then
-          git checkout master;
-        fi;
-        yarn release;
-      fi;
+    script: if [ "$GH_TOKEN" != "false" ]; then npx auto shipit; fi;
     skip-cleanup: true
     on:
       all_branches: true
