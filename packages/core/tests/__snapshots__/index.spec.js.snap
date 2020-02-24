@@ -2,6 +2,6 @@
 
 exports[`core component will render 1`] = `
 <div>
-  HelloWorld
+  Hello World
 </div>
 `;
