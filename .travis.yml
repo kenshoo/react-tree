@@ -31,7 +31,7 @@ after_success:
 
 deploy:
   - provider: script
-    script: yarn workspace @kenshooui/react-tree release
+    script: yarn release
     skip-cleanup: true
     on:
       all_branches: true
