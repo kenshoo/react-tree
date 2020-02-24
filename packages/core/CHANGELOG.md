@@ -1,3 +1,15 @@
+# v0.0.17 (Mon Feb 24 2020)
+
+#### 🐛  Bug Fix
+
+- publish react-tree core package [#27](https://github.com/kenshoo/react-tree/pull/27) ([@liorheber](https://github.com/liorheber))
+
+#### Authors: 1
+
+- Lior Heber ([@liorheber](https://github.com/liorheber))
+
+---
+
 # v0.0.16 (Mon Feb 24 2020)
 
 #### 🐛  Bug Fix
