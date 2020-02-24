@@ -46,6 +46,7 @@
     "build": "preconstruct build",
     "test": "jest --coverage",
     "prettier": "prettier --check ./packages/**/*.js --ignore-path .gitignore",
-    "prettier:fix": "prettier --check ./packages/**/*.js --ignore-path .gitignore --write"
+    "prettier:fix": "prettier --check ./packages/**/*.js --ignore-path .gitignore --write",
+    "release": "auto shipit"
   }
 }
