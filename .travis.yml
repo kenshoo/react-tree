@@ -31,7 +31,7 @@ after_success:
 
 deploy:
   - provider: script
-    script: yarn release
+    script: if [ "$NPM_TOKEN" != "false" ]; then yarn release; fi
     skip-cleanup: true
     on:
       all_branches: true
