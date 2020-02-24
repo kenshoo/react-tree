@@ -31,7 +31,13 @@ after_success:
 
 deploy:
   - provider: script
-    script: if [ "$NPM_TOKEN" != "false" ]; then yarn release; fi
+    script:
+      if [ "$NPM_TOKEN" != "false" ];then
+        if [ "$TRAVIS_BRANCH" == "master" ];then
+          git checkout master;
+        fi;
+        yarn release;
+      fi;
     skip-cleanup: true
     on:
       all_branches: true
