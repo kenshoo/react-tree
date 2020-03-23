@@ -12,5 +12,9 @@
   "devDependencies": {
     "react": "^16.12.0"
   },
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "classnames": "^2.2.6"
+  }
 }
