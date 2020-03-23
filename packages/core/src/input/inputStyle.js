@@ -7,11 +7,11 @@ export const css = () => ({
   borderLeft: "none",
   backgroundColor: "#F8F9FA",
 
-  '&:focus': {
+  "&:focus": {
     outline: "none !important"
   },
 
-  '&:active': {
+  "&:active": {
     outline: "none !important"
   }
 });

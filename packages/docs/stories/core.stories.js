@@ -29,11 +29,13 @@ const structure = [
   ["Keywords", "one level"]
 ];
 
-export const Basic = () => <Tree
-  structure={structure}
-  title={"Choose an item"}
-  onSelect={item => alert(item)}
-/>;
+export const Basic = () => (
+  <Tree
+    structure={structure}
+    title={"Choose an item"}
+    onSelect={item => alert(item)}
+  />
+);
 
 Basic.story = {
   name: "basic configuration"

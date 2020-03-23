@@ -8,7 +8,9 @@ const SearchedItem = ({ item = [""], searchIndex = 0, searchTerm = "" }) => {
     <div>
       <div>
         <span>{leaf.substring(0, searchIndex)}</span>
-        <span><b>{leaf.substring(searchIndex, searchIndex + searchTerm.length)}</b></span>
+        <span>
+          <b>{leaf.substring(searchIndex, searchIndex + searchTerm.length)}</b>
+        </span>
         <span>{leaf.substring(searchIndex + searchTerm.length)}</span>
       </div>
       <div>{parents}</div>

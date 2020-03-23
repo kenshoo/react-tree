@@ -8,11 +8,11 @@ export const css = props => ({
   padding: "0 6px",
   fontSize: "14px",
 
-  '&:hover': {
+  "&:hover": {
     backgroundColor: "#ECEEF3"
   },
 
-  '&:active': {
+  "&:active": {
     backgroundColor: "#E1E4EB"
   }
 });

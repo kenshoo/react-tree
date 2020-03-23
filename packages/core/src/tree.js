@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx } from "@emotion/core";
 import React, { useState } from "react";
 
 import { defaultStyles } from "./styles/styles";
@@ -29,7 +29,7 @@ const Tree = props => {
 
   const getStyles = (key, props = {}) => {
     const base = defaultStyles[key](props);
-    base.boxSizing = 'border-box';
+    base.boxSizing = "border-box";
     const custom = props.styles && props.styles[key];
     return custom ? custom(base, props) : base;
   };
@@ -49,15 +49,34 @@ const Tree = props => {
   });
 
   return (
-    <div css={getStyles('tree', props)}>
-      <Header parents={parents} title={title} onClick={onBackClick} getStyles={getStyles}>{title}</Header>
-      <Input getStyles={getStyles} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <div css={getStyles('items', props)}>
+    <div css={getStyles("tree", props)}>
+      <Header
+        parents={parents}
+        title={title}
+        onClick={onBackClick}
+        getStyles={getStyles}
+      >
+        {title}
+      </Header>
+      <Input
+        getStyles={getStyles}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+      />
+      <div css={getStyles("items", props)}>
         {leaves &&
-          leaves.length > 0 && leaves.map(item => (
-            <Item getStyles={getStyles} searchTerm={searchTerm} item={item} onClick={onClick} />
+          leaves.length > 0 &&
+          leaves.map(item => (
+            <Item
+              getStyles={getStyles}
+              searchTerm={searchTerm}
+              item={item}
+              onClick={onClick}
+            />
           ))}
-        {leaves && leaves.length === 0 && <NoResults text={noResultsText} getStyles={getStyles} />}
+        {leaves && leaves.length === 0 && (
+          <NoResults text={noResultsText} getStyles={getStyles} />
+        )}
       </div>
     </div>
   );
