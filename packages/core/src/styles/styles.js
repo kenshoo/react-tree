@@ -4,6 +4,11 @@ import {
   backIconCss as headerBackIconCss
 } from "../header/headerStyle";
 import { css as itemCss } from "../item/itemStyle";
+import {
+  highlightCss,
+  initialCss as searchItemInitialCss,
+  parentsCss
+} from "../item/searched_item/searchedItemStyle";
 import { css as itemsCss } from "../items/itemsStyle";
 import {
   css as inputCss,
@@ -21,6 +26,9 @@ export const defaultStyles = {
   header: headerWrapperCss,
   headerBackIcon: headerBackIconCss,
   item: itemCss,
+  highlight: highlightCss,
+  searchItemInitial: searchItemInitialCss,
+  parents: parentsCss,
   items: itemsCss,
   noResults: noResultsCss,
   noResultsIcon: noResultsIconCss,

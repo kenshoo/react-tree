@@ -1,10 +1,9 @@
-const useItemCallbacks = ({
-  parents,
-  setParents,
-  currentDepth,
-  setCurrentDepth,
-  onSelect
-}) => {
+import { useState } from "react";
+
+const useItemCallbacks = onSelect => {
+  const [currentDepth, setCurrentDepth] = useState(0);
+  const [parents, setParents] = useState([]);
+
   const onClick = (label, item, hasChild) => {
     if (hasChild) {
       setParents(parents.concat(label));
@@ -19,7 +18,14 @@ const useItemCallbacks = ({
     setCurrentDepth(currentDepth - 1);
   };
 
-  return [onClick, onBackClick];
+  return {
+    onClick,
+    onBackClick,
+    currentDepth,
+    setCurrentDepth,
+    parents,
+    setParents
+  };
 };
 
 export default useItemCallbacks;

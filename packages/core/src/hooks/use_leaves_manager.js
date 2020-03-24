@@ -22,7 +22,7 @@ const useLeavesManager = ({ structure, parents, currentDepth }) => {
     setLeaves(removeDuplicateLeafs(leaves));
   }, [searchTerm, parents, currentDepth]);
 
-  return [searchTerm, setSearchTerm, leaves];
+  return { searchTerm, setSearchTerm, leaves };
 };
 
 export default useLeavesManager;

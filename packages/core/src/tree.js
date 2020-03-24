@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import React, { useState } from "react";
+import React from "react";
 
 import { defaultStyles } from "./styles/styles";
 import ItemDefault from "./item/item";
@@ -24,8 +24,6 @@ const Tree = props => {
     noResultsRenderer: NoResults = NoResultsDefault,
     itemRenderer: Item = ItemDefault
   } = props;
-  const [currentDepth, setCurrentDepth] = useState(0);
-  const [parents, setParents] = useState([]);
 
   const getStyles = (key, props = {}) => {
     const base = defaultStyles[key](props);
@@ -34,18 +32,14 @@ const Tree = props => {
     return custom ? custom(base, props) : base;
   };
 
-  const [searchTerm, setSearchTerm, leaves] = useLeavesManager({
+  const { onClick, onBackClick, currentDepth, parents } = useItemCallbacks(
+    onSelect
+  );
+
+  const { searchTerm, setSearchTerm, leaves } = useLeavesManager({
     structure,
     parents,
     currentDepth
-  });
-
-  const [onClick, onBackClick] = useItemCallbacks({
-    parents,
-    setParents,
-    currentDepth,
-    setCurrentDepth,
-    onSelect
   });
 
   return (

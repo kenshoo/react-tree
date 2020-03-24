@@ -11,10 +11,10 @@ const Header = props => {
           <span css={getStyles("headerBackIcon", props)} onClick={onClick}>
             ⬅️
           </span>
-          <span>{parents[parents.length - 1]}</span>
+          {parents[parents.length - 1]}
         </>
       )}
-      {parents.length === 0 && <span>{title}</span>}
+      {parents.length === 0 && <>{title}</>}
     </div>
   );
 };

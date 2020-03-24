@@ -1,4 +1,4 @@
 module.exports = {
-    plugins: ['emotion'],
+    plugins: ["emotion"],
     presets: ["@babel/preset-env", "@babel/preset-react"]
 };

@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import React from "react";
 
-import SearchedItem from "./searched_item";
+import SearchedItem from "./searched_item/searched_item";
 import BasicItem from "./basic_item";
 
 const ItemRenderer = props => {
@@ -29,6 +29,7 @@ const ItemRenderer = props => {
           item={item}
           searchIndex={searchIndex}
           searchTerm={searchTerm.trim()}
+          getStyles={getStyles}
         />
       )}
       {searchTerm === "" && (
