@@ -16,3 +16,5 @@ export const css = props => ({
     backgroundColor: "#E1E4EB"
   }
 });
+
+export const forwardIconCss = () => ({});

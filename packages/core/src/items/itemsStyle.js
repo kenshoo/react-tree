@@ -1,4 +1,4 @@
-export const css = () => ({
+export default () => ({
   maxHeight: "203px",
   overflowY: "auto"
 });

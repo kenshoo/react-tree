@@ -1,4 +1,4 @@
-export const css = () => ({
+export default () => ({
   width: "230px",
   height: "280px",
   backgroundColor: "#F8F9FA",

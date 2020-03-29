@@ -5,6 +5,8 @@ import React from "react";
 import SearchedItem from "./searched_item/searched_item";
 import BasicItem from "./basic_item";
 
+export const ForwardIconRenderer = () => <>➡️</>;
+
 const ItemRenderer = props => {
   const {
     getStyles,
@@ -14,7 +16,8 @@ const ItemRenderer = props => {
       hasChild: false,
       currentDepth: 0
     },
-    onClick
+    onClick,
+    forwardIconRenderer: ForwardIcon = ForwardIconRenderer
   } = props;
   const searchIndex = item[item.length - 1]
     .toLowerCase()
@@ -39,7 +42,11 @@ const ItemRenderer = props => {
           searchTerm={searchTerm.trim()}
         />
       )}
-      {hasChild && <span>➡️</span>}
+      {hasChild && (
+        <span css={getStyles("forwardIcon", props)}>
+          <ForwardIcon />
+        </span>
+      )}
     </div>
   );
 };

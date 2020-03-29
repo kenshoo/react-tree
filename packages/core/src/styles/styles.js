@@ -1,15 +1,15 @@
-import { css as treeCss } from "../treeStyle";
+import treeCss from "../treeStyle";
 import {
   wrapperCss as headerWrapperCss,
   backIconCss as headerBackIconCss
 } from "../header/headerStyle";
-import { css as itemCss } from "../item/itemStyle";
+import { css as itemCss, forwardIconCss } from "../item/itemStyle";
 import {
   highlightCss,
   initialCss as searchItemInitialCss,
   parentsCss
 } from "../item/searched_item/searchedItemStyle";
-import { css as itemsCss } from "../items/itemsStyle";
+import itemsCss from "../items/itemsStyle";
 import {
   css as inputCss,
   searchIconCss as inputSearchIconCss,
@@ -35,6 +35,7 @@ export const defaultStyles = {
   noResultsText: noResultsTextCss,
   input: inputCss,
   searchInput: inputSearchIconCss,
+  forwardIcon: forwardIconCss,
   inputWrapper: inputWrapperCss
 };
 

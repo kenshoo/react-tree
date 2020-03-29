@@ -20,9 +20,13 @@ const Tree = props => {
     noResultsText = "No matching results",
     styles,
     headerRenderer: Header = HeaderDefault,
+    backIconRenderer,
     inputRenderer: Input = InputDefault,
+    inputIconRenderer,
     noResultsRenderer: NoResults = NoResultsDefault,
-    itemRenderer: Item = ItemDefault
+    noResultsIconRenderer,
+    itemRenderer: Item = ItemDefault,
+    forwardIconRenderer
   } = props;
 
   const getStyles = (key, props = {}) => {
@@ -49,6 +53,7 @@ const Tree = props => {
         title={title}
         onClick={onBackClick}
         getStyles={getStyles}
+        backIconRenderer={backIconRenderer}
       >
         {title}
       </Header>
@@ -56,6 +61,7 @@ const Tree = props => {
         getStyles={getStyles}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
+        inputIconRenderer={inputIconRenderer}
       />
       <div css={getStyles("items", props)}>
         {leaves &&
@@ -66,10 +72,15 @@ const Tree = props => {
               searchTerm={searchTerm}
               item={item}
               onClick={onClick}
+              forwardIconRenderer={forwardIconRenderer}
             />
           ))}
         {leaves && leaves.length === 0 && (
-          <NoResults text={noResultsText} getStyles={getStyles} />
+          <NoResults
+            text={noResultsText}
+            getStyles={getStyles}
+            noResultsIconRenderer={noResultsIconRenderer}
+          />
         )}
       </div>
     </div>
