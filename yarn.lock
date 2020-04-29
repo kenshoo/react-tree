@@ -2155,9 +2155,9 @@
     "@types/node" ">= 8"
 
 "@preconstruct/cli@^1.1.7":
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/@preconstruct/cli/-/cli-1.1.7.tgz#a03985cc74724aead592d2263650f328c11b8f01"
-  integrity sha512-5vuqbS+nm2RFIFR68Ca2Q9Vgg/YSbfAnOjouJMy25zv5mvsIZE9XsUWkv8R9BhqlgU52KcOT0rPbiyqDQQdjDw==
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/@preconstruct/cli/-/cli-1.1.13.tgz#4738e9b5ea26b45f6a972543d163705ba795b304"
+  integrity sha512-IRq+Z+raCQD6S6UPoPol+o7SOR/v0usvUE+NXEkVSQtMIUlQyyhDM9J7EKE062zn8okrsSZSag1yWbvtYnqlPQ==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.7.7"
@@ -2182,6 +2182,7 @@
     meow "^5.0.0"
     micromatch "^4.0.2"
     ms "^2.1.2"
+    normalize-path "^3.0.0"
     npm-packlist "^2.0.2"
     p-limit "^2.2.1"
     parse-glob "^3.0.4"
