@@ -1,11 +1,11 @@
 import React from "react";
 import { shallow } from "enzyme";
-import HelloWorld from "../src";
+import Tree from "../src";
 import toJson from "enzyme-to-json";
 
-describe("core component", () => {
-  test("will render", () => {
-    const cmp = shallow(<HelloWorld />);
+describe("tree component", () => {
+  test("default", () => {
+    const cmp = shallow(<Tree />);
     expect(toJson(cmp)).toMatchSnapshot();
   });
 });

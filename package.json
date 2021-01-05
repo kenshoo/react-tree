@@ -49,6 +49,7 @@
     "postinstall": "preconstruct dev",
     "build": "preconstruct build",
     "test": "jest --coverage",
+    "storybook": "yarn workspace @kenshooui/react-tree-docs storybook",
     "prettier": "prettier --check ./packages/**/*.js --ignore-path .gitignore",
     "prettier:fix": "prettier --check ./packages/**/*.js --ignore-path .gitignore --write",
     "release": "auto shipit"

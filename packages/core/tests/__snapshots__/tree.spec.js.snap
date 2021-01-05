@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tree component default 1`] = `
+<EmotionCssPropInternal
+  __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Tree"
+  __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
+  css={
+    Object {
+      "backgroundColor": "#F8F9FA",
+      "border": "1px solid #E1E4EB",
+      "borderRadius": "4px",
+      "boxShadow": "0 6px 10px 0 rgba(27, 32, 70, 0.09)",
+      "boxSizing": "border-box",
+      "color": "#545769",
+      "fontFamily": "Arial, Helvetica, sans-serif",
+      "height": "280px",
+      "position": "relative",
+      "width": "230px",
+    }
+  }
+>
+  <Header
+    getStyles={[Function]}
+    onClick={[Function]}
+    parents={Array []}
+  />
+  <Input
+    getStyles={[Function]}
+    searchTerm=""
+    setSearchTerm={[Function]}
+  />
+  <EmotionCssPropInternal
+    __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Tree"
+    __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
+    css={
+      Object {
+        "boxSizing": "border-box",
+        "maxHeight": "203px",
+        "overflowY": "auto",
+      }
+    }
+  >
+    <NoResults
+      getStyles={[Function]}
+      text="No matching results"
+    />
+  </EmotionCssPropInternal>
+</EmotionCssPropInternal>
+`;
