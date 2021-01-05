@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import React from "react";
+import React, { useRef } from "react";
 
 import { defaultStyles } from "./styles/styles";
 import ItemDefault from "./item/item";
@@ -10,15 +10,16 @@ import NoResultsDefault from "./no_results/no_results";
 
 import useLeavesManager from "./hooks/use_leaves_manager";
 import useItemCallbacks from "./hooks/use_item_callbacks";
+import TreeContainerRenderer from "./tree_container/tree_container";
+import ItemsRenderer from "./items/items";
+import useTreeHeight from "./hooks/use_ref_height";
 
 const Tree = props => {
   const {
     structure = [],
     title,
     onSelect,
-    className,
     noResultsText = "No matching results",
-    styles,
     headerRenderer: Header = HeaderDefault,
     backIconRenderer,
     inputRenderer: Input = InputDefault,
@@ -26,7 +27,9 @@ const Tree = props => {
     noResultsRenderer: NoResults = NoResultsDefault,
     noResultsIconRenderer,
     itemRenderer: Item = ItemDefault,
-    forwardIconRenderer
+    itemsRenderer: Items = ItemsRenderer,
+    forwardIconRenderer,
+    treeContainerRenderer: TreeContainer = TreeContainerRenderer
   } = props;
 
   const getStyles = (key, props = {}) => {
@@ -35,6 +38,9 @@ const Tree = props => {
     const custom = props.styles && props.styles[key];
     return custom ? custom(base, props) : base;
   };
+
+  const ref = useRef();
+  const treeHeight = useTreeHeight({ ref });
 
   const { onClick, onBackClick, currentDepth, parents } = useItemCallbacks(
     onSelect
@@ -47,7 +53,7 @@ const Tree = props => {
   });
 
   return (
-    <div css={getStyles("tree", props)}>
+    <TreeContainer getStyles={getStyles} innerRef={ref}>
       <Header
         parents={parents}
         title={title}
@@ -63,7 +69,7 @@ const Tree = props => {
         setSearchTerm={setSearchTerm}
         inputIconRenderer={inputIconRenderer}
       />
-      <div css={getStyles("items", props)}>
+      <Items getStyles={getStyles} treeHeight={treeHeight}>
         {leaves &&
           leaves.length > 0 &&
           leaves.map(item => (
@@ -82,8 +88,8 @@ const Tree = props => {
             noResultsIconRenderer={noResultsIconRenderer}
           />
         )}
-      </div>
-    </div>
+      </Items>
+    </TreeContainer>
   );
 };
 

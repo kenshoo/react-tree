@@ -1,4 +1,4 @@
-import treeCss from "../treeStyle";
+import treeCss from "../tree_container/treeStyle";
 import {
   wrapperCss as headerWrapperCss,
   backIconCss as headerBackIconCss

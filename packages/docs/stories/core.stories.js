@@ -1,9 +1,21 @@
 import React from "react";
+import MaterialUITree from "@kenshooui/material_ui_tree";
 import Tree from "@kenshooui/react-tree";
+import makeStyles from "@material-ui/core/styles/makeStyles";
+
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    flexDirection: "row"
+  },
+  tree: {
+    padding: 20
+  }
+});
 
 export default {
   title: "Tree",
-  component: Tree
+  component: MaterialUITree
 };
 
 const structure = [
@@ -29,13 +41,30 @@ const structure = [
   ["Keywords", "one level"]
 ];
 
-export const Basic = () => (
-  <Tree
-    structure={structure}
-    title={"Choose an item"}
-    onSelect={item => alert(item)}
-  />
-);
+export const Basic = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <div className={classes.tree}>
+        <MaterialUITree
+          structure={structure}
+          title={"Choose an item"}
+          onSelect={item => alert(item)}
+          width={300}
+          height={400}
+        />
+      </div>
+      <div className={classes.tree}>
+        <Tree
+          structure={structure}
+          title={"Choose an item"}
+          onSelect={item => alert(item)}
+        />
+      </div>
+    </div>
+  );
+};
 
 Basic.story = {
   name: "basic configuration"
