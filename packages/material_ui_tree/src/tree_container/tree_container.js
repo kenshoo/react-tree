@@ -13,10 +13,14 @@ const useStyles = makeStyles(({ width, height }) => ({
   }
 }));
 
-const MaterialUIContainerRenderer = ({ children, width, height }) => {
+const MaterialUIContainerRenderer = props => {
+  const { children, width, height } = props;
   const classes = useStyles({ width, height });
+  const Container = React.forwardRef((props, ref) => (
+    <div {...props} ref={ref} />
+  ));
   return (
-    <Card raised={true} className={classes.root}>
+    <Card raised={true} className={classes.root} component={Container}>
       {children}
     </Card>
   );
