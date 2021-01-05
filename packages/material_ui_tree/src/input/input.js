@@ -5,14 +5,22 @@ import InputBase from "@material-ui/core/InputBase";
 import Divider from "@material-ui/core/Divider";
 import CardActions from "@material-ui/core/CardActions";
 import IconButton from "@material-ui/core/IconButton";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() => ({
+  root: {
+    padding: "8px 16px"
+  }
+}));
 
 const MaterialUIInputRenderer = ({
   searchTerm = "",
   setSearchTerm = () => {}
 }) => {
+  const classes = useStyles();
   return (
     <>
-      <CardActions>
+      <CardActions className={classes.root}>
         <InputBase
           id="input-with-icon-adornment"
           value={searchTerm}
