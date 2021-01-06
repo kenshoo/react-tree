@@ -10,7 +10,7 @@ const useLeavesManager = ({ structure, parents, currentDepth }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [leaves, setLeaves] = useState([]);
 
-  const onInputChange = event => setSearchTerm(event?.target?.value || "");
+  const onInputChange = event => setSearchTerm(event.target.value || "");
 
   useEffect(() => {
     const leaves = structure

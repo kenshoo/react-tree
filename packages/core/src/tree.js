@@ -86,7 +86,7 @@ const Tree = props => {
         onInputChange={onInputChange}
         inputIconRenderer={inputIconRenderer}
       />
-      <Items getStyles={getStyles} itemsHeight={itemsHeight}>
+      <Items getStyles={getStyles} height={itemsHeight}>
         {leaves &&
           leaves.length > 0 &&
           leaves.map(item => (
@@ -101,7 +101,7 @@ const Tree = props => {
       </Items>
       {leaves && leaves.length === 0 && (
         <NoResults
-          itemsHeight={itemsHeight}
+          height={itemsHeight}
           text={noResultsText}
           getStyles={getStyles}
           noResultsIconRenderer={noResultsIconRenderer}

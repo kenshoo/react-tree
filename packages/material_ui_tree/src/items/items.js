@@ -8,12 +8,12 @@ const useStyles = makeStyles({
   root: {
     overflowY: "auto",
     overflowX: "hidden",
-    maxHeight: props => props.itemsHeight - ITEMS_PADDING
+    maxHeight: props => props.height - ITEMS_PADDING
   }
 });
 
-const MaterialUIItemsRenderer = ({ children, itemsHeight }) => {
-  const classes = useStyles({ itemsHeight });
+const MaterialUIItemsRenderer = ({ children, height }) => {
+  const classes = useStyles({ height });
   return (
     <List className={classes.root} component="nav">
       {children}

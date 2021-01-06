@@ -11,13 +11,13 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    height: props => props.itemsHeight - ITEMS_PADDING
+    height: props => props.height - ITEMS_PADDING
   }
 });
 
-const MaterialUINoResults = ({ text, itemsHeight }) => {
+const MaterialUINoResults = ({ text, height }) => {
   const classes = useStyles({
-    itemsHeight
+    height
   });
   return (
     <div className={classes.root}>

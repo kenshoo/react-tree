@@ -9,6 +9,9 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles(() => ({
   root: {
     padding: "8px 16px"
+  },
+  button: {
+    marginLeft: -8
   }
 }));
 
@@ -18,7 +21,7 @@ const MaterialUIHeader = ({ headerRef, parents = [], onClick, title = "" }) => {
     <div ref={headerRef}>
       <CardActions className={classes.root}>
         {parents.length > 0 && (
-          <IconButton size={"small"}>
+          <IconButton className={classes.button} size={"small"}>
             <ChevronLeft onClick={onClick} />
           </IconButton>
         )}
