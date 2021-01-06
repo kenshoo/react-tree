@@ -10,6 +10,8 @@ const useLeavesManager = ({ structure, parents, currentDepth }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [leaves, setLeaves] = useState([]);
 
+  const onInputChange = event => setSearchTerm(event?.target?.value || "");
+
   useEffect(() => {
     const leaves = structure
       .filter(
@@ -22,7 +24,7 @@ const useLeavesManager = ({ structure, parents, currentDepth }) => {
     setLeaves(removeDuplicateLeafs(leaves));
   }, [searchTerm, parents, currentDepth]);
 
-  return { searchTerm, setSearchTerm, leaves };
+  return { searchTerm, setSearchTerm, onInputChange, leaves };
 };
 
 export default useLeavesManager;

@@ -6,6 +6,7 @@ export const BackIconRenderer = () => <>⬅️</>;
 
 const Header = props => {
   const {
+    headerRef,
     parents = [],
     onClick,
     title = "",
@@ -13,7 +14,7 @@ const Header = props => {
     backIconRenderer: BackIcon = BackIconRenderer
   } = props;
   return (
-    <div css={getStyles("header", props)}>
+    <div ref={headerRef} css={getStyles("header", props)}>
       {parents.length > 0 && (
         <>
           <span css={getStyles("headerBackIcon", props)} onClick={onClick}>

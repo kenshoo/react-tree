@@ -13,18 +13,20 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
+const noop = () => {};
+
 const MaterialUIInputRenderer = ({
+  inputRef,
   searchTerm = "",
-  setSearchTerm = () => {}
+  onInputChange = noop
 }) => {
   const classes = useStyles();
   return (
-    <>
+    <div ref={inputRef}>
       <CardActions className={classes.root}>
         <InputBase
-          id="input-with-icon-adornment"
           value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
+          onChange={onInputChange}
           startAdornment={
             <InputAdornment position="start">
               <Search />
@@ -33,14 +35,14 @@ const MaterialUIInputRenderer = ({
           endAdornment={
             searchTerm !== "" && (
               <IconButton size={"small"}>
-                <Clear onClick={() => setSearchTerm("")} />
+                <Clear onClick={onInputChange} />
               </IconButton>
             )
           }
         />
       </CardActions>
       <Divider />
-    </>
+    </div>
   );
 };
 

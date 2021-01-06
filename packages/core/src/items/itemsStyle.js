@@ -1,4 +1,4 @@
-export default () => ({
-  maxHeight: "203px",
+export default ({ itemsHeight }) => ({
+  maxHeight: itemsHeight,
   overflowY: "auto"
 });

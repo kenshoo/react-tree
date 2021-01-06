@@ -4,6 +4,8 @@ import { ChevronRight } from "@material-ui/icons";
 import ListItem from "@material-ui/core/ListItem";
 import SearchedItem from "./searched_item";
 
+const noop = () => {};
+
 const MaterialUIItemRenderer = props => {
   const {
     searchTerm = "",
@@ -12,7 +14,7 @@ const MaterialUIItemRenderer = props => {
       hasChild: false,
       currentDepth: 0
     },
-    onClick = () => {}
+    onClick = noop
   } = props;
   const searchIndex = item[item.length - 1]
     .toLowerCase()

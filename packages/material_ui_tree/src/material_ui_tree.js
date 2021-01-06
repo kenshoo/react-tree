@@ -25,9 +25,9 @@ const MaterialUITree = ({
       structure={structure}
       title={title}
       onSelect={onSelect}
-      treeContainerRenderer={props =>
-        treeContainerRenderer({ ...props, width, height })
-      }
+      width={width}
+      height={height}
+      treeContainerRenderer={treeContainerRenderer}
       headerRenderer={headerRenderer}
       inputRenderer={inputRenderer}
       itemRenderer={itemRenderer}

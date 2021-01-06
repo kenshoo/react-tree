@@ -2,15 +2,18 @@ import React from "react";
 import List from "@material-ui/core/List";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
-const useStyles = makeStyles(({ treeHeight }) => ({
-  root: {
-    overflow: "auto",
-    maxHeight: treeHeight - 48 - 42
-  }
-}));
+const ITEMS_PADDING = 16;
 
-const MaterialUIItemsRenderer = ({ children, treeHeight }) => {
-  const classes = useStyles({ treeHeight });
+const useStyles = makeStyles({
+  root: {
+    overflowY: "auto",
+    overflowX: "hidden",
+    maxHeight: props => props.itemsHeight - ITEMS_PADDING
+  }
+});
+
+const MaterialUIItemsRenderer = ({ children, itemsHeight }) => {
+  const classes = useStyles({ itemsHeight });
   return (
     <List className={classes.root} component="nav">
       {children}

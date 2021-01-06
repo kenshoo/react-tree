@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import React, { useRef } from "react";
+import React from "react";
 
 import { defaultStyles } from "./styles/styles";
 import ItemDefault from "./item/item";
@@ -12,13 +12,19 @@ import useLeavesManager from "./hooks/use_leaves_manager";
 import useItemCallbacks from "./hooks/use_item_callbacks";
 import TreeContainerRenderer from "./tree_container/tree_container";
 import ItemsRenderer from "./items/items";
-import useTreeHeight from "./hooks/use_ref_height";
+import useContainerHeight from "./hooks/use_components_refs";
+
+const DEFAULT_WIDTH = 230;
+const DEFAULT_HEIGHT = 300;
+const PIXEL_SUFFIX = "px";
 
 const Tree = props => {
   const {
     structure = [],
     title,
     onSelect,
+    width,
+    height,
     noResultsText = "No matching results",
     headerRenderer: Header = HeaderDefault,
     backIconRenderer,
@@ -39,22 +45,32 @@ const Tree = props => {
     return custom ? custom(base, props) : base;
   };
 
-  const ref = useRef();
-  const treeHeight = useTreeHeight({ ref });
+  const {
+    containerRef,
+    headerRef,
+    inputRef,
+    itemsHeight
+  } = useContainerHeight();
 
   const { onClick, onBackClick, currentDepth, parents } = useItemCallbacks(
     onSelect
   );
 
-  const { searchTerm, setSearchTerm, leaves } = useLeavesManager({
+  const { searchTerm, onInputChange, leaves } = useLeavesManager({
     structure,
     parents,
     currentDepth
   });
 
   return (
-    <TreeContainer getStyles={getStyles} innerRef={ref}>
+    <TreeContainer
+      containerRef={containerRef}
+      getStyles={getStyles}
+      width={(width || DEFAULT_WIDTH) + PIXEL_SUFFIX}
+      height={(height || DEFAULT_HEIGHT) + PIXEL_SUFFIX}
+    >
       <Header
+        headerRef={headerRef}
         parents={parents}
         title={title}
         onClick={onBackClick}
@@ -64,12 +80,13 @@ const Tree = props => {
         {title}
       </Header>
       <Input
+        inputRef={inputRef}
         getStyles={getStyles}
         searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
+        onInputChange={onInputChange}
         inputIconRenderer={inputIconRenderer}
       />
-      <Items getStyles={getStyles} treeHeight={treeHeight}>
+      <Items getStyles={getStyles} itemsHeight={itemsHeight}>
         {leaves &&
           leaves.length > 0 &&
           leaves.map(item => (
@@ -81,14 +98,15 @@ const Tree = props => {
               forwardIconRenderer={forwardIconRenderer}
             />
           ))}
-        {leaves && leaves.length === 0 && (
-          <NoResults
-            text={noResultsText}
-            getStyles={getStyles}
-            noResultsIconRenderer={noResultsIconRenderer}
-          />
-        )}
       </Items>
+      {leaves && leaves.length === 0 && (
+        <NoResults
+          itemsHeight={itemsHeight}
+          text={noResultsText}
+          getStyles={getStyles}
+          noResultsIconRenderer={noResultsIconRenderer}
+        />
+      )}
     </TreeContainer>
   );
 };

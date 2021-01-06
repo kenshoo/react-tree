@@ -12,10 +12,10 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const MaterialUIHeader = ({ parents = [], onClick, title = "" }) => {
+const MaterialUIHeader = ({ headerRef, parents = [], onClick, title = "" }) => {
   const classes = useStyles();
   return (
-    <>
+    <div ref={headerRef}>
       <CardActions className={classes.root}>
         {parents.length > 0 && (
           <IconButton size={"small"}>
@@ -27,7 +27,7 @@ const MaterialUIHeader = ({ parents = [], onClick, title = "" }) => {
         </Typography>
       </CardActions>
       <Divider />
-    </>
+    </div>
   );
 };
 

@@ -1,21 +1,32 @@
 import React from "react";
-import MaterialUITree from "@kenshooui/material_ui_tree";
 import Tree from "@kenshooui/react-tree";
+import MaterialUITree from "@kenshooui/material-tree";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
 const useStyles = makeStyles({
-  root: {
+  wrapper: {
+    padding: 40,
     display: "flex",
-    flexDirection: "row"
+    justifyContent: "start",
+    alignItems: "start"
   },
-  tree: {
-    padding: 20
+  item: {
+    display: "flex",
+    alignItems: "center",
+    marginRight: 25,
+    flexDirection: "column"
+  },
+  title: {
+    fontSize: 16,
+    color: "#747070",
+    marginBottom: 16,
+    fontWeight: "bold"
   }
 });
 
 export default {
   title: "Tree",
-  component: MaterialUITree
+  component: Tree
 };
 
 const structure = [
@@ -43,23 +54,50 @@ const structure = [
 
 export const Basic = () => {
   const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <div className={classes.tree}>
-        <MaterialUITree
-          structure={structure}
-          title={"Choose an item"}
-          onSelect={item => alert(item)}
-          width={300}
-          height={400}
-        />
-      </div>
-      <div className={classes.tree}>
+    <div className={classes.wrapper}>
+      <div className={classes.item}>
+        <div className={classes.title}>Default Dimensions</div>
         <Tree
           structure={structure}
           title={"Choose an item"}
           onSelect={item => alert(item)}
+        />
+      </div>
+      <div className={classes.item}>
+        <div className={classes.title}>Custom Dimensions</div>
+        <Tree
+          structure={structure}
+          title={"Choose an item"}
+          onSelect={item => alert(item)}
+          width={200}
+          height={200}
+        />
+      </div>
+    </div>
+  );
+};
+
+export const MaterialTheme = () => {
+  const classes = useStyles();
+  return (
+    <div className={classes.wrapper}>
+      <div className={classes.item}>
+        <div className={classes.title}>Default Dimensions</div>
+        <MaterialUITree
+          structure={structure}
+          title={"Choose an item"}
+          onSelect={item => alert(item)}
+        />
+      </div>
+      <div className={classes.item}>
+        <div className={classes.title}>Custom Dimensions</div>
+        <MaterialUITree
+          structure={structure}
+          title={"Choose an item"}
+          onSelect={item => alert(item)}
+          width={250}
+          height={350}
         />
       </div>
     </div>
@@ -67,5 +105,9 @@ export const Basic = () => {
 };
 
 Basic.story = {
-  name: "basic configuration"
+  name: "Basic configuration"
+};
+
+MaterialTheme.story = {
+  name: "Material Theme"
 };
