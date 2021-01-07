@@ -15,7 +15,14 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const MaterialUIHeader = ({ headerRef, parents = [], onClick, title = "" }) => {
+const noop = () => {};
+
+const MaterialHeaderRenderer = ({
+  headerRef,
+  parents = [],
+  onClick = noop,
+  title = ""
+}) => {
   const classes = useStyles();
   return (
     <div ref={headerRef}>
@@ -34,4 +41,4 @@ const MaterialUIHeader = ({ headerRef, parents = [], onClick, title = "" }) => {
   );
 };
 
-export default MaterialUIHeader;
+export default MaterialHeaderRenderer;

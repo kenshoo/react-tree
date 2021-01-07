@@ -1,6 +1,6 @@
 import React from "react";
 import Tree from "@kenshooui/react-tree";
-import MaterialUITree from "@kenshooui/material-tree";
+import MaterialTree from "@kenshooui/material-tree";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
 const useStyles = makeStyles({
@@ -84,7 +84,7 @@ export const MaterialTheme = () => {
     <div className={classes.wrapper}>
       <div className={classes.item}>
         <div className={classes.title}>Default Dimensions</div>
-        <MaterialUITree
+        <MaterialTree
           structure={structure}
           title={"Choose an item"}
           onSelect={item => alert(item)}
@@ -92,7 +92,7 @@ export const MaterialTheme = () => {
       </div>
       <div className={classes.item}>
         <div className={classes.title}>Custom Dimensions</div>
-        <MaterialUITree
+        <MaterialTree
           structure={structure}
           title={"Choose an item"}
           onSelect={item => alert(item)}

@@ -1,24 +1,26 @@
 import React from "react";
 import Tree from "@kenshooui/react-tree";
-import MaterialUIItemRenderer from "./item/item";
-import MaterialUIInputRenderer from "./input/input";
+import MaterialItemRenderer from "./item/item";
+import MaterialInputRenderer from "./input/input";
 import MaterialUIContainerRenderer from "./tree_container/tree_container";
-import MaterialUIHeader from "./header/header";
-import MaterialUIItemsRenderer from "./items/items";
-import MaterialUINoResults from "./no_results/no_results";
+import MaterialHeaderRenderer from "./header/header";
+import MaterialItemsRenderer from "./items/items";
+import MaterialNoResultsRenderer from "./no_results/no_results";
 
-const MaterialUITree = ({
+const noop = () => {};
+
+const MaterialTree = ({
   structure = [],
-  title,
-  onSelect,
+  title = "",
+  onSelect = noop,
   width,
   height,
   treeContainerRenderer = MaterialUIContainerRenderer,
-  headerRenderer = MaterialUIHeader,
-  inputRenderer = MaterialUIInputRenderer,
-  itemRenderer = MaterialUIItemRenderer,
-  itemsRenderer = MaterialUIItemsRenderer,
-  noResultsRenderer = MaterialUINoResults
+  headerRenderer = MaterialHeaderRenderer,
+  inputRenderer = MaterialInputRenderer,
+  itemRenderer = MaterialItemRenderer,
+  itemsRenderer = MaterialItemsRenderer,
+  noResultsRenderer = MaterialNoResultsRenderer
 }) => {
   return (
     <Tree
@@ -37,4 +39,4 @@ const MaterialUITree = ({
   );
 };
 
-export default MaterialUITree;
+export default MaterialTree;

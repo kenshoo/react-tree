@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   }
 });
 
-const MaterialUINoResults = ({ text, height }) => {
+const MaterialNoResultsRenderer = ({ text, height }) => {
   const classes = useStyles({
     height
   });
@@ -27,4 +27,4 @@ const MaterialUINoResults = ({ text, height }) => {
   );
 };
 
-export default MaterialUINoResults;
+export default MaterialNoResultsRenderer;

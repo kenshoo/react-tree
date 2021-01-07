@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   }
 });
 
-const MaterialUIItemsRenderer = ({ children, height }) => {
+const MaterialItemsRenderer = ({ children, height }) => {
   const classes = useStyles({ height });
   return (
     <List className={classes.root} component="nav">
@@ -21,4 +21,4 @@ const MaterialUIItemsRenderer = ({ children, height }) => {
   );
 };
 
-export default MaterialUIItemsRenderer;
+export default MaterialItemsRenderer;

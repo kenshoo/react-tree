@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
 
 const noop = () => {};
 
-const MaterialUIInputRenderer = ({
+const MaterialInputRenderer = ({
   inputRef,
   searchTerm = "",
   onInputChange = noop
@@ -46,4 +46,4 @@ const MaterialUIInputRenderer = ({
   );
 };
 
-export default MaterialUIInputRenderer;
+export default MaterialInputRenderer;

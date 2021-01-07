@@ -6,9 +6,9 @@ const useComponentsRefs = () => {
   const inputRef = useRef();
 
   const itemsHeight =
-    containerRef?.current?.clientHeight -
-    headerRef?.current?.clientHeight -
-    inputRef?.current?.clientHeight;
+    (containerRef?.current?.clientHeight || 0) -
+    (headerRef?.current?.clientHeight || 0) -
+    (inputRef?.current?.clientHeight || 0);
 
   return { containerRef, headerRef, inputRef, itemsHeight };
 };

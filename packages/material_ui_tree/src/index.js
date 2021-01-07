@@ -1,3 +1,3 @@
-import MaterialUITree from "./material_ui_tree";
+import MaterialTree from "./material_tree";
 
-export default MaterialUITree;
+export default MaterialTree;

@@ -6,7 +6,7 @@ import SearchedItem from "./searched_item";
 
 const noop = () => {};
 
-const MaterialUIItemRenderer = props => {
+const MaterialItemRenderer = props => {
   const {
     searchTerm = "",
     item: { item, hasChild, currentDepth } = {
@@ -37,4 +37,4 @@ const MaterialUIItemRenderer = props => {
   );
 };
 
-export default MaterialUIItemRenderer;
+export default MaterialItemRenderer;
