@@ -3,7 +3,11 @@ import {
   wrapperCss as headerWrapperCss,
   backIconCss as headerBackIconCss
 } from "../header/headerStyle";
-import { css as itemCss, forwardIconCss } from "../item/itemStyle";
+import {
+  css as itemCss,
+  forwardIconCss,
+  selectedItem as selectedItemCss
+} from "../item/itemStyle";
 import {
   highlightCss,
   initialCss as searchItemInitialCss,
@@ -13,6 +17,7 @@ import itemsCss from "../items/itemsStyle";
 import {
   css as inputCss,
   searchIconCss as inputSearchIconCss,
+  clearIconCss as clearSearchIconCss,
   wrapperCss as inputWrapperCss
 } from "../input/inputStyle";
 import {
@@ -35,7 +40,9 @@ export const defaultStyles = {
   noResultsText: noResultsTextCss,
   input: inputCss,
   searchInput: inputSearchIconCss,
+  clearInput: clearSearchIconCss,
   forwardIcon: forwardIconCss,
+  selectedItem: selectedItemCss,
   inputWrapper: inputWrapperCss
 };
 

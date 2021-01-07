@@ -22,6 +22,13 @@ export const searchIconCss = () => ({
   left: "8px"
 });
 
+export const clearIconCss = () => ({
+  position: "absolute",
+  top: "8px",
+  right: "8px",
+  cursor: "pointer"
+});
+
 export const wrapperCss = () => ({
   position: "relative"
 });

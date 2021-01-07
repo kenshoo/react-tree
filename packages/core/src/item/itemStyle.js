@@ -18,3 +18,7 @@ export const css = props => ({
 });
 
 export const forwardIconCss = () => ({});
+
+export const selectedItem = props => ({
+  fontWeight: props.isSelected ? 600 : 400
+});
