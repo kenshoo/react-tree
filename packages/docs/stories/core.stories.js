@@ -65,6 +65,15 @@ export const Basic = () => {
         />
       </div>
       <div className={classes.item}>
+        <div className={classes.title}>Mark selected item</div>
+        <Tree
+          structure={structure}
+          title={"Choose an item"}
+          onSelect={item => alert(item)}
+          markSelectedItem={true}
+        />
+      </div>
+      <div className={classes.item}>
         <div className={classes.title}>Custom Dimensions</div>
         <Tree
           structure={structure}
@@ -88,6 +97,15 @@ export const MaterialTheme = () => {
           structure={structure}
           title={"Choose an item"}
           onSelect={item => alert(item)}
+        />
+      </div>
+      <div className={classes.item}>
+        <div className={classes.title}>Mark selected item</div>
+        <MaterialTree
+          structure={structure}
+          title={"Choose an item"}
+          onSelect={item => alert(item)}
+          markSelectedItem={true}
         />
       </div>
       <div className={classes.item}>

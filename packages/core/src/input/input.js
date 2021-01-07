@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core";
 import React from "react";
 
 export const InputIconRenderer = () => <>🔍</>;
+export const ClearIconRenderer = () => <>✘️</>;
 
 const Input = props => {
   const {
@@ -10,7 +11,8 @@ const Input = props => {
     searchTerm,
     onInputChange,
     getStyles,
-    inputIconRenderer: InputIcon = InputIconRenderer
+    inputIconRenderer: InputIcon = InputIconRenderer,
+    clearIconRenderer: ClearIcon = ClearIconRenderer
   } = props;
   return (
     <div ref={inputRef} css={getStyles("inputWrapper", props)}>
@@ -22,6 +24,11 @@ const Input = props => {
         value={searchTerm}
         onChange={onInputChange}
       />
+      {searchTerm !== "" && (
+        <span css={getStyles("clearInput", props)} onClick={onInputChange}>
+          <ClearIcon />
+        </span>
+      )}
     </div>
   );
 };

@@ -5,6 +5,7 @@ import ListItem from "@material-ui/core/ListItem";
 import SearchedItem from "./searched_item";
 
 const noop = () => {};
+const defaultSelectedItem = { item: [], leaf: "" };
 
 const MaterialItemRenderer = props => {
   const {
@@ -14,8 +15,10 @@ const MaterialItemRenderer = props => {
       hasChild: false,
       currentDepth: 0
     },
-    onClick = noop
+    onClick = noop,
+    selectedItem = defaultSelectedItem
   } = props;
+  const isItemSelected = item.toString() === selectedItem.item.toString();
   const searchIndex = item[item.length - 1]
     .toLowerCase()
     .indexOf(searchTerm.trim().toLowerCase());
@@ -29,9 +32,19 @@ const MaterialItemRenderer = props => {
           item={item}
           searchIndex={searchIndex}
           searchTerm={searchTerm.trim()}
+          isSelected={
+            isItemSelected && item[item.length - 1] === selectedItem.leaf
+          }
         />
       )}
-      {searchTerm === "" && <BasicItem label={item[currentDepth]} />}
+      {searchTerm === "" && (
+        <BasicItem
+          label={item[currentDepth]}
+          isSelected={
+            isItemSelected && item[currentDepth] === selectedItem.leaf
+          }
+        />
+      )}
       {hasChild && <ChevronRight />}
     </ListItem>
   );

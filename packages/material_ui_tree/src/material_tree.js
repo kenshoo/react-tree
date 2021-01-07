@@ -20,7 +20,8 @@ const MaterialTree = ({
   inputRenderer = MaterialInputRenderer,
   itemRenderer = MaterialItemRenderer,
   itemsRenderer = MaterialItemsRenderer,
-  noResultsRenderer = MaterialNoResultsRenderer
+  noResultsRenderer = MaterialNoResultsRenderer,
+  markSelectedItem = false
 }) => {
   return (
     <Tree
@@ -35,6 +36,7 @@ const MaterialTree = ({
       itemRenderer={itemRenderer}
       itemsRenderer={itemsRenderer}
       noResultsRenderer={noResultsRenderer}
+      markSelectedItem={markSelectedItem}
     />
   );
 };

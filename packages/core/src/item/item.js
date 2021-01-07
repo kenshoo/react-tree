@@ -6,6 +6,7 @@ import SearchedItem from "./searched_item/searched_item";
 import BasicItem from "./basic_item";
 
 export const ForwardIconRenderer = () => <>➡️</>;
+const defaultSelectedItem = { item: [], leaf: "" };
 
 const ItemRenderer = props => {
   const {
@@ -17,8 +18,10 @@ const ItemRenderer = props => {
       currentDepth: 0
     },
     onClick,
-    forwardIconRenderer: ForwardIcon = ForwardIconRenderer
+    forwardIconRenderer: ForwardIcon = ForwardIconRenderer,
+    selectedItem = defaultSelectedItem
   } = props;
+  const isItemSelected = item.toString() === selectedItem.item.toString();
   const searchIndex = item[item.length - 1]
     .toLowerCase()
     .indexOf(searchTerm.trim().toLowerCase());
@@ -33,13 +36,18 @@ const ItemRenderer = props => {
           searchIndex={searchIndex}
           searchTerm={searchTerm.trim()}
           getStyles={getStyles}
+          isSelected={
+            isItemSelected && item[item.length - 1] === selectedItem.leaf
+          }
         />
       )}
       {searchTerm === "" && (
         <BasicItem
+          getStyles={getStyles}
           label={item[currentDepth]}
-          searchIndex={searchIndex}
-          searchTerm={searchTerm.trim()}
+          isSelected={
+            isItemSelected && item[currentDepth] === selectedItem.leaf
+          }
         />
       )}
       {hasChild && (
