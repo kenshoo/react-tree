@@ -1,8 +1,9 @@
-export const css = () => ({
+export const css = ({ height }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  marginTop: "30px"
+  justifyContent: "center",
+  height: height
 });
 
 export const icon = () => ({

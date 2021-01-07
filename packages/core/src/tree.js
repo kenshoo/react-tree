@@ -10,15 +10,22 @@ import NoResultsDefault from "./no_results/no_results";
 
 import useLeavesManager from "./hooks/use_leaves_manager";
 import useItemCallbacks from "./hooks/use_item_callbacks";
+import TreeContainerRenderer from "./tree_container/tree_container";
+import ItemsRenderer from "./items/items";
+import useContainerHeight from "./hooks/use_components_refs";
+
+const DEFAULT_WIDTH = 230;
+const DEFAULT_HEIGHT = 300;
+const PIXEL_SUFFIX = "px";
 
 const Tree = props => {
   const {
     structure = [],
     title,
     onSelect,
-    className,
+    width,
+    height,
     noResultsText = "No matching results",
-    styles,
     headerRenderer: Header = HeaderDefault,
     backIconRenderer,
     inputRenderer: Input = InputDefault,
@@ -26,7 +33,9 @@ const Tree = props => {
     noResultsRenderer: NoResults = NoResultsDefault,
     noResultsIconRenderer,
     itemRenderer: Item = ItemDefault,
-    forwardIconRenderer
+    itemsRenderer: Items = ItemsRenderer,
+    forwardIconRenderer,
+    treeContainerRenderer: TreeContainer = TreeContainerRenderer
   } = props;
 
   const getStyles = (key, props = {}) => {
@@ -36,19 +45,32 @@ const Tree = props => {
     return custom ? custom(base, props) : base;
   };
 
+  const {
+    containerRef,
+    headerRef,
+    inputRef,
+    itemsHeight
+  } = useContainerHeight();
+
   const { onClick, onBackClick, currentDepth, parents } = useItemCallbacks(
     onSelect
   );
 
-  const { searchTerm, setSearchTerm, leaves } = useLeavesManager({
+  const { searchTerm, onInputChange, leaves } = useLeavesManager({
     structure,
     parents,
     currentDepth
   });
 
   return (
-    <div css={getStyles("tree", props)}>
+    <TreeContainer
+      containerRef={containerRef}
+      getStyles={getStyles}
+      width={(width || DEFAULT_WIDTH) + PIXEL_SUFFIX}
+      height={(height || DEFAULT_HEIGHT) + PIXEL_SUFFIX}
+    >
       <Header
+        headerRef={headerRef}
         parents={parents}
         title={title}
         onClick={onBackClick}
@@ -58,12 +80,13 @@ const Tree = props => {
         {title}
       </Header>
       <Input
+        inputRef={inputRef}
         getStyles={getStyles}
         searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
+        onInputChange={onInputChange}
         inputIconRenderer={inputIconRenderer}
       />
-      <div css={getStyles("items", props)}>
+      <Items getStyles={getStyles} height={itemsHeight}>
         {leaves &&
           leaves.length > 0 &&
           leaves.map(item => (
@@ -75,15 +98,16 @@ const Tree = props => {
               forwardIconRenderer={forwardIconRenderer}
             />
           ))}
-        {leaves && leaves.length === 0 && (
-          <NoResults
-            text={noResultsText}
-            getStyles={getStyles}
-            noResultsIconRenderer={noResultsIconRenderer}
-          />
-        )}
-      </div>
-    </div>
+      </Items>
+      {leaves && leaves.length === 0 && (
+        <NoResults
+          height={itemsHeight}
+          text={noResultsText}
+          getStyles={getStyles}
+          noResultsIconRenderer={noResultsIconRenderer}
+        />
+      )}
+    </TreeContainer>
   );
 };
 

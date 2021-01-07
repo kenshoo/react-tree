@@ -1,4 +1,4 @@
-import treeCss from "../treeStyle";
+import containerCss from "../tree_container/treeContainerStyle";
 import {
   wrapperCss as headerWrapperCss,
   backIconCss as headerBackIconCss
@@ -22,7 +22,7 @@ import {
 } from "../no_results/noResultsStyle";
 
 export const defaultStyles = {
-  tree: treeCss,
+  container: containerCss,
   header: headerWrapperCss,
   headerBackIcon: headerBackIconCss,
   item: itemCss,
