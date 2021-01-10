@@ -67,6 +67,7 @@ const Tree = props => {
     <TreeContainer
       containerRef={containerRef}
       getStyles={getStyles}
+      styles={styles}
       width={(width || DEFAULT_WIDTH) + PIXEL_SUFFIX}
       height={(height || DEFAULT_HEIGHT) + PIXEL_SUFFIX}
     >
@@ -76,6 +77,7 @@ const Tree = props => {
         title={title}
         onClick={onBackClick}
         getStyles={getStyles}
+        styles={styles}
         backIconRenderer={backIconRenderer}
       >
         {title}
@@ -83,11 +85,12 @@ const Tree = props => {
       <Input
         inputRef={inputRef}
         getStyles={getStyles}
+        styles={styles}
         searchTerm={searchTerm}
         onInputChange={onInputChange}
         inputIconRenderer={inputIconRenderer}
       />
-      <Items getStyles={getStyles} height={itemsHeight}>
+      <Items styles={styles} getStyles={getStyles} height={itemsHeight}>
         {leaves &&
           leaves.length > 0 &&
           leaves.map(item => (
@@ -105,6 +108,7 @@ const Tree = props => {
           height={itemsHeight}
           text={noResultsText}
           getStyles={getStyles}
+          styles={styles}
           noResultsIconRenderer={noResultsIconRenderer}
         />
       )}

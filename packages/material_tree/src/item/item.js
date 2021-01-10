@@ -14,7 +14,8 @@ const MaterialItemRenderer = props => {
       hasChild: false,
       currentDepth: 0
     },
-    onClick = noop
+    onClick = noop,
+    forwardIconRenderer: ForwardIcon = ChevronRight
   } = props;
   const searchIndex = item[item.length - 1]
     .toLowerCase()
@@ -32,7 +33,7 @@ const MaterialItemRenderer = props => {
         />
       )}
       {searchTerm === "" && <BasicItem label={item[currentDepth]} />}
-      {hasChild && <ChevronRight />}
+      {hasChild && <ForwardIcon />}
     </ListItem>
   );
 };

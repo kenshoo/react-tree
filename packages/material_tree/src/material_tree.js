@@ -17,10 +17,16 @@ const MaterialTree = ({
   height,
   treeContainerRenderer = MaterialUIContainerRenderer,
   headerRenderer = MaterialHeaderRenderer,
+  backIconRenderer,
   inputRenderer = MaterialInputRenderer,
+  inputIconRenderer,
+  clearIconRenderer,
   itemRenderer = MaterialItemRenderer,
+  forwardIconRenderer,
   itemsRenderer = MaterialItemsRenderer,
-  noResultsRenderer = MaterialNoResultsRenderer
+  noResultsRenderer = MaterialNoResultsRenderer,
+  noResultsText,
+  noResultsIconRenderer
 }) => {
   return (
     <Tree
@@ -31,10 +37,16 @@ const MaterialTree = ({
       height={height}
       treeContainerRenderer={treeContainerRenderer}
       headerRenderer={headerRenderer}
+      backIconRenderer={backIconRenderer}
       inputRenderer={inputRenderer}
+      inputIconRenderer={inputIconRenderer}
+      clearIconRenderer={clearIconRenderer}
       itemRenderer={itemRenderer}
+      forwardIconRenderer={forwardIconRenderer}
       itemsRenderer={itemsRenderer}
       noResultsRenderer={noResultsRenderer}
+      noResultsText={noResultsText}
+      noResultsIconRenderer={noResultsIconRenderer}
     />
   );
 };
