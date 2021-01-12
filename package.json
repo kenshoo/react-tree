@@ -30,6 +30,10 @@
       "!packages/docs"
     ]
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "jest": {
     "moduleDirectories": [
       "node_modules"
