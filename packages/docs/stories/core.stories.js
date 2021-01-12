@@ -8,6 +8,7 @@ import {
   CustomSearchIcon,
   customStyles
 } from "./custom_renderers";
+import { MarkSelectedItemTree } from "./mark_selected_items_tree";
 
 const useStyles = makeStyles({
   wrapper: {
@@ -92,12 +93,7 @@ export const Basic = () => {
       </div>
       <div className={classes.item}>
         <div className={classes.title}>Mark selected item</div>
-        <Tree
-          structure={structure}
-          title={"Choose an item"}
-          onSelect={item => alert(item)}
-          markSelectedItem={true}
-        />
+        <MarkSelectedItemTree structure={structure} treeComponent={Tree} />
       </div>
       <div className={classes.item}>
         <div className={classes.title}>Custom Dimensions</div>
@@ -138,11 +134,9 @@ export const MaterialTheme = () => {
       </div>
       <div className={classes.item}>
         <div className={classes.title}>Mark selected item</div>
-        <MaterialTree
-            structure={structure}
-            title={"Choose an item"}
-            onSelect={item => alert(item)}
-            markSelectedItem={true}
+        <MarkSelectedItemTree
+          structure={structure}
+          treeComponent={MaterialTree}
         />
       </div>
       <div className={classes.item}>

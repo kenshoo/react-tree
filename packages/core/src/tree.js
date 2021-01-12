@@ -38,7 +38,7 @@ const Tree = props => {
     itemsRenderer: Items = ItemsRenderer,
     forwardIconRenderer,
     treeContainerRenderer: TreeContainer = TreeContainerRenderer,
-    markSelectedItem = false
+    selectedItem
   } = props;
 
   const getStyles = (key, props = {}) => {
@@ -55,15 +55,8 @@ const Tree = props => {
     itemsHeight
   } = useContainerHeight();
 
-  const {
-    onClick,
-    onBackClick,
-    currentDepth,
-    parents,
-    selectedItem
-  } = useItemCallbacks({
-    onSelect,
-    markSelectedItem
+  const { onClick, onBackClick, currentDepth, parents } = useItemCallbacks({
+    onSelect
   });
 
   const { searchTerm, onInputChange, leaves } = useLeavesManager({

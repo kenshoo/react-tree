@@ -25,9 +25,9 @@ const Input = props => {
         onChange={onInputChange}
       />
       {searchTerm !== "" && (
-        <span css={getStyles("clearInput", props)} onClick={onInputChange}>
+        <button css={getStyles("clearInput", props)} onClick={onInputChange}>
           <ClearIcon />
-        </span>
+        </button>
       )}
     </div>
   );
