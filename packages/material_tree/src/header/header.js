@@ -21,7 +21,8 @@ const MaterialHeaderRenderer = ({
   headerRef,
   parents = [],
   onClick = noop,
-  title = ""
+  title = "",
+  backIconRenderer: BackIcon = ChevronLeft
 }) => {
   const classes = useStyles();
   return (
@@ -29,7 +30,7 @@ const MaterialHeaderRenderer = ({
       <CardActions className={classes.root}>
         {parents.length > 0 && (
           <IconButton className={classes.button} size={"small"}>
-            <ChevronLeft onClick={onClick} />
+            <BackIcon onClick={onClick} />
           </IconButton>
         )}
         <Typography variant="subtitle1">

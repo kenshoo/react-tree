@@ -18,7 +18,9 @@ const noop = () => {};
 const MaterialInputRenderer = ({
   inputRef,
   searchTerm = "",
-  onInputChange = noop
+  onInputChange = noop,
+  inputIconRenderer: InputIcon = Search,
+  clearIconRenderer: ClearIcon = Clear
 }) => {
   const classes = useStyles();
   return (
@@ -29,13 +31,13 @@ const MaterialInputRenderer = ({
           onChange={onInputChange}
           startAdornment={
             <InputAdornment position="start">
-              <Search />
+              <InputIcon />
             </InputAdornment>
           }
           endAdornment={
             searchTerm !== "" && (
               <IconButton size={"small"}>
-                <Clear onClick={onInputChange} />
+                <ClearIcon onClick={onInputChange} />
               </IconButton>
             )
           }

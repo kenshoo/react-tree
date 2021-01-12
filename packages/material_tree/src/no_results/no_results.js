@@ -15,13 +15,17 @@ const useStyles = makeStyles({
   }
 });
 
-const MaterialNoResultsRenderer = ({ text, height }) => {
+const MaterialNoResultsRenderer = ({
+  text,
+  height,
+  noResultsIconRenderer: NoResultsIcon = Warning
+}) => {
   const classes = useStyles({
     height
   });
   return (
     <div className={classes.root}>
-      <Warning fontSize="large" color="disabled" />
+      <NoResultsIcon fontSize="large" color="disabled" />
       <Typography variant="subtitle1">{text}</Typography>
     </div>
   );

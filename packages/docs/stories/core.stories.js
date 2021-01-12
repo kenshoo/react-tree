@@ -2,6 +2,12 @@ import React from "react";
 import Tree from "@kenshooui/react-tree";
 import MaterialTree from "@kenshooui/material-tree";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import {
+  CustomForwardIcon,
+  CustomHeader,
+  CustomSearchIcon,
+  customStyles
+} from "./custom_renderers";
 
 const useStyles = makeStyles({
   wrapper: {
@@ -57,11 +63,31 @@ export const Basic = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.item}>
-        <div className={classes.title}>Default Dimensions</div>
+        <div className={classes.title}>Default Tree</div>
         <Tree
           structure={structure}
           title={"Choose an item"}
           onSelect={item => alert(item)}
+        />
+      </div>
+      <div className={classes.item}>
+        <div className={classes.title}>Custom Renderers</div>
+        <Tree
+          structure={structure}
+          title={"Choose an item"}
+          onSelect={item => alert(item)}
+          headerRenderer={CustomHeader}
+          forwardIconRenderer={CustomForwardIcon}
+          inputIconRenderer={CustomSearchIcon}
+        />
+      </div>
+      <div className={classes.item}>
+        <div className={classes.title}>Custom Styles</div>
+        <Tree
+          structure={structure}
+          title={"Choose an item"}
+          onSelect={item => alert(item)}
+          styles={customStyles}
         />
       </div>
       <div className={classes.item}>
@@ -83,11 +109,22 @@ export const MaterialTheme = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.item}>
-        <div className={classes.title}>Default Dimensions</div>
+        <div className={classes.title}>Default Tree</div>
         <MaterialTree
           structure={structure}
           title={"Choose an item"}
           onSelect={item => alert(item)}
+        />
+      </div>
+      <div className={classes.item}>
+        <div className={classes.title}>Custom Renderers</div>
+        <MaterialTree
+          structure={structure}
+          title={"Choose an item"}
+          onSelect={item => alert(item)}
+          headerRenderer={CustomHeader}
+          forwardIconRenderer={CustomForwardIcon}
+          inputIconRenderer={CustomSearchIcon}
         />
       </div>
       <div className={classes.item}>
