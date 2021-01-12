@@ -4,7 +4,7 @@ React Tree is a straight forward component that allows a user to display and man
 
 The basic tree is built using @emotion/core, and supports both styling and component renderers customizations.
 
-Examples - https://github.com/kenshoo/react-tree/blob/master/packages/docs/stories/core.stories.js
+[Examples](https://github.com/kenshoo/react-tree/blob/master/packages/docs/stories/core.stories.js)
 
  
   <p align="center">
@@ -50,29 +50,7 @@ const structure = [
 ```
 
 ### Props
-
-| Name                   | Type        | Default                | Description                                                     |
-| :------------------    | :---------- | :--------------------- | :-------------------------------------------------------------- |
-| `structure`            | `Array`     | `[]`                   | `Component input - array of leaves along with their ancestors`  |
-| `title`                | `String`    | `""`                   | `Title to be displayed on root mode`                            |
-| `onSelect`             | `Func`      | `() => {}`             | `callback when clicking a leaf`                                 |
-| `styles`               | `Object`    |                        | `Optional - enables customized styles`                          |
-| `width`                | `number`    | `230 `                 | `The width of the tree component`                               |
-| `height`               | `number`    | `300 `                 | `The height of the tree component`                              |
-| `noResultsText`        | `String`    | `No matching results`  | `The message to be displayed when having no results on searching`                  |
-| `noResultsRenderer`    | `Component` | `no_matching_items.js` | `Component to replace the default NoResults component. `        |
-| `noResultsIconRenderer`| `Component` |                        | `Component to replace the default NoResultsIcon component.`     |
-| `headerRenderer`       | `Component` | `header.js`            | `Component to replace the default Header component.`            |
-| `backIconRenderer`     | `Component` |                       | `Component to replace the default BackIcon component. `          |
-| `inputRenderer`        | `Component` | `input.js️`             | `Component to replace the default Input component. `            |
-| `inputIconRenderer`    | `Component` |                        | `Component to replace the default InputIcon component. `        |
-| `clearIconRenderer`    | `Component` |                        | `Component to replace the default CleaseIcon component. `       |
-| `itemRenderer`         | `Component` | `item.js️`              | `Component to replace the default Item component. `             |
-| `itemsRenderer`        | `Component` | `items.js`             | `Component to replace the default Items component. `            |
-| `forwardIconRenderer`  | `Component` |                        | `Component to replace the default ForwardIcon component. `      |
-| `treeContainerRenderer`| `Component` | `tree_container.js`    | `Component to replace the default TreeContainer component. `    |
-| `markSelectedItem`     | `boolean`   | `false`                | `Toggle to mark selected item. `                                |
-
+Can be found - [here](https://github.com/kenshoo/react-tree#props)
 <br/>
 
 ### Customization

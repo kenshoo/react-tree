@@ -56,29 +56,7 @@ const structure = [
 ```
 
 ### Props
-
-| Name                   | Type        | Default                | Description                                                     |
-| :------------------    | :---------- | :--------------------- | :-------------------------------------------------------------- |
-| `structure`            | `Array`     | `[]`                   | `Component input - array of leaves along with their ancestors`  |
-| `title`                | `String`    | `""`                   | `Title to be displayed on root mode`                            |
-| `onSelect`             | `Func`      | `() => {}`             | `callback when clicking a leaf`                                 |
-| `styles`               | `Object`    |                        | `Optional - enables customized styles`                          |
-| `width`                | `number`    | `230 `                 | `The width of the tree component`                               |
-| `height`               | `number`    | `300 `                 | `The height of the tree component`                              |
-| `noResultsText`        | `String`    | `No matching results`  | `The message the is displayed when having no results on searching`                  |
-| `noResultsRenderer`    | `Component` | `no_results.js`        | `Component to replace the default NoResults component. Renders when having no results on searching`                  |
-| `noResultsIconRenderer`| `Component` | `Warning icon`         | `Component to replace the default NoResultsIcon component.`     |
-| `headerRenderer`       | `Component` | `header.js`            | `Component to replace the default Header component.`            |
-| `backIconRenderer`     | `Component` | `ChevronLeft icon`     | `Component to replace the default BackIcon component. `         |
-| `inputRenderer`        | `Component` | `input.js️`             | `Component to replace the default Input component. `            |
-| `inputIconRenderer`    | `Component` | `Search icon`          | `Component to replace the default InputIcon component. `        |
-| `clearIconRenderer`    | `Component` | `Clear icon`           | `Component to replace the default CleaseIcon component. `       |
-| `itemRenderer`         | `Component` | `item.js️`              | `Component to replace the default Item component. `             |
-| `itemsRenderer`        | `Component` | `items.js`             | `Component to replace the default Items component. `            |
-| `forwardIconRenderer`  | `Component` | `ChevronRight icon`    | `Component to replace the default ForwardIcon component. `      |
-| `treeContainerRenderer`| `Component` | `tree_container.js`    | `Component to replace the default TreeContainer component. `    |
-| `markSelectedItem`     | `boolean`   | `false`                | `Toggle to mark selected item. `                                |
-
+Can be found - [here](https://github.com/kenshoo/react-tree#props)
 <br/>
 
 ### Customization
