@@ -8,6 +8,7 @@ import {
   CustomSearchIcon,
   customStyles
 } from "./custom_renderers";
+import { MarkSelectedItemTree } from "./mark_selected_items_tree";
 
 const useStyles = makeStyles({
   wrapper: {
@@ -91,6 +92,10 @@ export const Basic = () => {
         />
       </div>
       <div className={classes.item}>
+        <div className={classes.title}>Mark selected item</div>
+        <MarkSelectedItemTree structure={structure} treeComponent={Tree} />
+      </div>
+      <div className={classes.item}>
         <div className={classes.title}>Custom Dimensions</div>
         <Tree
           structure={structure}
@@ -125,6 +130,13 @@ export const MaterialTheme = () => {
           headerRenderer={CustomHeader}
           forwardIconRenderer={CustomForwardIcon}
           inputIconRenderer={CustomSearchIcon}
+        />
+      </div>
+      <div className={classes.item}>
+        <div className={classes.title}>Mark selected item</div>
+        <MarkSelectedItemTree
+          structure={structure}
+          treeComponent={MaterialTree}
         />
       </div>
       <div className={classes.item}>

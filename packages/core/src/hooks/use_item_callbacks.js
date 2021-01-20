@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useItemCallbacks = onSelect => {
+const useItemCallbacks = ({ onSelect }) => {
   const [currentDepth, setCurrentDepth] = useState(0);
   const [parents, setParents] = useState([]);
 
