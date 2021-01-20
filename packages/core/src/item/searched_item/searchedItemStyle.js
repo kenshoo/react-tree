@@ -1,13 +1,14 @@
 export const initialCss = props => ({
-  color: "#545769"
+  color: "#545769",
+  fontWeight: props.isSelected ? 600 : 400
 });
 
-export const highlightCss = props => ({
+export const highlightCss = () => ({
   fontWeight: 600,
-  color: "#2020e1"
+  color: "#268DEC"
 });
 
-export const parentsCss = props => ({
+export const parentsCss = () => ({
   color: "#98A1B8",
   marginTop: "2px"
 });

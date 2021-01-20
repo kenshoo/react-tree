@@ -15,8 +15,11 @@ const MaterialItemRenderer = props => {
       currentDepth: 0
     },
     onClick = noop,
+    selectedItem,
     forwardIconRenderer: ForwardIcon = ChevronRight
   } = props;
+
+  const isItemSelected = item.toString() === selectedItem?.item?.toString();
   const searchIndex = item[item.length - 1]
     .toLowerCase()
     .indexOf(searchTerm.trim().toLowerCase());
@@ -30,9 +33,19 @@ const MaterialItemRenderer = props => {
           item={item}
           searchIndex={searchIndex}
           searchTerm={searchTerm.trim()}
+          isSelected={
+            isItemSelected && item[item.length - 1] === selectedItem.leaf
+          }
         />
       )}
-      {searchTerm === "" && <BasicItem label={item[currentDepth]} />}
+      {searchTerm === "" && (
+        <BasicItem
+          label={item[currentDepth]}
+          isSelected={
+            isItemSelected && item[currentDepth] === selectedItem.leaf
+          }
+        />
+      )}
       {hasChild && <ForwardIcon />}
     </ListItem>
   );
