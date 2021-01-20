@@ -7,34 +7,26 @@ a user to display and manage a hierarchical structure of items using <b>Material
 
  
   <p align="center">
-      <img src="react-tree-demo.gif?raw=true" width="400" />
+      <img src="react-tree-demo.gif?raw=true" width="288" />
   </p>
   
   ### Installation
-  Since Material Rree is based on <b>React Tree</b> logic, you need to install both react-tree and material-tree.
+  Since Material Rree is based on React Tree< logic, you need to install both <b>@kenshooui/react-tree</b> and <b>@kenshooui/material-tree</b>.
   
-  In addition, dependencies to <b>material-ui icons and core components</b> are needed if they don't exist in your project.
+  Dependencies to <b>@material-ui/core</b> and <b>@material-ui/icons</b> are needed only if they don't exist in your project.
   
    **Installation using npm:**
   ```
-   npm install @kenshooui/material-tree --save
+   npm install --save @kenshooui/react-tree @kenshooui/material-tree
 
-   npm install @kenshooui/react-tree --save
-
-   npm install @material-ui/core --save
-
-   npm install @material-ui/icons --save
+   npm install --save @material-ui/core @material-ui/icons
   ```
  **Installation using Yarn:**
 
 ```
- yarn add @kenshooui/material-tree
+ yarn add @kenshooui/material-tree @kenshooui/react-tree
 
- yarn add @kenshooui/react-tree
-
- yarn add @material-ui/core
-
- yarn add @material-ui/icons
+ yarn add @material-ui/core @material-ui/icons
 ```
 
  ### How to use
@@ -64,29 +56,7 @@ const structure = [
 ```
 
 ### Props
-
-| Name                   | Type        | Default                | Description                                                     |
-| :------------------    | :---------- | :--------------------- | :-------------------------------------------------------------- |
-| `structure`            | `Array`     | `[]`                   | `Component input - array of leaves along with their ancestors`  |
-| `title`                | `String`    | `""`                   | `Title to be displayed on root mode`                            |
-| `onSelect`             | `Func`      | `() => {}`             | `callback when clicking a leaf`                                 |
-| `styles`               | `Object`    |                        | `Optional - enables customized styles`                          |
-| `width`                | `number`    | `230 `                 | `The width of the tree component`                               |
-| `height`               | `number`    | `300 `                 | `The height of the tree component`                              |
-| `noResultsText`        | `String`    | `No matching results`  | `The message the is displayed when having no results on searching`                  |
-| `noResultsRenderer`    | `Component` | `no_results.js`        | `Component to replace the default NoResults component. Renders when having no results on searching`                  |
-| `noResultsIconRenderer`| `Component` | `Warning icon`         | `Component to replace the default NoResultsIcon component.`     |
-| `headerRenderer`       | `Component` | `header.js`            | `Component to replace the default Header component.`            |
-| `backIconRenderer`     | `Component` | `ChevronLeft icon`     | `Component to replace the default BackIcon component. `         |
-| `inputRenderer`        | `Component` | `input.js️`             | `Component to replace the default Input component. `            |
-| `inputIconRenderer`    | `Component` | `Search icon`          | `Component to replace the default InputIcon component. `        |
-| `clearIconRenderer`    | `Component` | `Clear icon`           | `Component to replace the default CleaseIcon component. `       |
-| `itemRenderer`         | `Component` | `item.js️`              | `Component to replace the default Item component. `             |
-| `itemsRenderer`        | `Component` | `items.js`             | `Component to replace the default Items component. `            |
-| `forwardIconRenderer`  | `Component` | `ChevronRight icon`    | `Component to replace the default ForwardIcon component. `      |
-| `treeContainerRenderer`| `Component` | `tree_container.js`    | `Component to replace the default TreeContainer component. `    |
-| `markSelectedItem`     | `boolean`   | `false`                | `Toggle to mark selected item. `                                |
-
+Can be found - [here](https://github.com/kenshoo/react-tree#props)
 <br/>
 
 ### Customization
@@ -194,13 +164,3 @@ Use the `noResultsRenderer` to replace the default component.
 `height` - The height of the items list
 
 `noResultsIconRenderer` - Use the `noResultsIconRenderer` to replace the default no results warning icon component.
-
-
-## How to Contribute
-
-#### Setting up development environment
-
-1. Fork the repository and create your branch from `master`.
-2. Install the project: `yarn install`
-3. Run tests: `yarn test` or `yarn test:watch`
-4. Run dev environment: `yarn storybook` and head to [https://localhost:6006](https://localhost:6006)

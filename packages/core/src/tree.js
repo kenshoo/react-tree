@@ -26,6 +26,7 @@ const Tree = props => {
     width,
     height,
     styles,
+    className,
     noResultsText = "No matching results",
     headerRenderer: Header = HeaderDefault,
     backIconRenderer,
