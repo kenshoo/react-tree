@@ -1,3 +1,32 @@
+# (Mon Jan 25 2021)
+
+#### 🐛  Bug Fix
+
+- Attempt force public release [#150](https://github.com/kenshoo/react-tree/pull/150) ([@liorheber](https://github.com/liorheber))
+- Basics [#60](https://github.com/kenshoo/react-tree/pull/60) ([@orineuman](https://github.com/orineuman))
+- `@kenshooui/react-tree@0.0.19`, `@kenshooui/material-tree@0.0.2`
+  - Rearrange README files [#151](https://github.com/kenshoo/react-tree/pull/151) ([@liatgo](https://github.com/liatgo) [@liorheber](https://github.com/liorheber))
+- `@kenshooui/react-tree@0.0.19`, `@kenshooui/material-tree@0.0.2`
+  - Additions: add clear button in core + add selected item support [#146](https://github.com/kenshoo/react-tree/pull/146) ([@liatgo](https://github.com/liatgo))
+- `@kenshooui/react-tree@0.0.19`, `@kenshooui/material-tree@0.0.2`
+  - Update README file [#147](https://github.com/kenshoo/react-tree/pull/147) ([@liatgo](https://github.com/liatgo) [@liorheber](https://github.com/liorheber))
+- `@kenshooui/react-tree@0.0.19`, `@kenshooui/material-tree@0.0.2`
+  - Attempt force release [#149](https://github.com/kenshoo/react-tree/pull/149) ([@liorheber](https://github.com/liorheber))
+- `@kenshooui/react-tree@0.0.19`, `@kenshooui/material-tree@0.0.2`
+  - Prepare for initial release [#148](https://github.com/kenshoo/react-tree/pull/148) ([@liorheber](https://github.com/liorheber))
+- `@kenshooui/material-tree@0.0.2`
+  - Renae material tree package and add .npmignore file [#145](https://github.com/kenshoo/react-tree/pull/145) ([@liatgo](https://github.com/liatgo))
+- `@kenshooui/react-tree@0.0.19`
+  - Support Material-UI tree [#143](https://github.com/kenshoo/react-tree/pull/143) ([@liatgo](https://github.com/liatgo))
+
+#### Authors: 3
+
+- Liat Gofshtein ([@liatgo](https://github.com/liatgo))
+- Lior Heber ([@liorheber](https://github.com/liorheber))
+- Ori Neuman ([@orineuman](https://github.com/orineuman))
+
+---
+
 # (Mon Feb 24 2020)
 
 #### 🐛  Bug Fix
