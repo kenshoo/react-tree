@@ -39,6 +39,7 @@ const Tree = props => {
     itemsRenderer: Items = ItemsRenderer,
     forwardIconRenderer,
     treeContainerRenderer: TreeContainer = TreeContainerRenderer,
+    customItemsRenderer,
     selectedItem
   } = props;
 
@@ -94,20 +95,29 @@ const Tree = props => {
         inputIconRenderer={inputIconRenderer}
         clearIconRenderer={clearIconRenderer}
       />
-      <Items styles={styles} getStyles={getStyles} height={itemsHeight}>
-        {leaves &&
-          leaves.length > 0 &&
-          leaves.map(item => (
-            <Item
-              getStyles={getStyles}
-              searchTerm={searchTerm}
-              item={item}
-              onClick={onClick}
-              forwardIconRenderer={forwardIconRenderer}
-              selectedItem={selectedItem}
-            />
-          ))}
-      </Items>
+      {customItemsRenderer ? (
+        React.cloneElement(customItemsRenderer, {
+          ...props,
+          leaves,
+          searchTerm,
+          onClick
+        })
+      ) : (
+        <Items styles={styles} getStyles={getStyles} height={itemsHeight}>
+          {leaves &&
+            leaves.length > 0 &&
+            leaves.map(item => (
+              <Item
+                getStyles={getStyles}
+                searchTerm={searchTerm}
+                item={item}
+                onClick={onClick}
+                forwardIconRenderer={forwardIconRenderer}
+                selectedItem={selectedItem}
+              />
+            ))}
+        </Items>
+      )}
       {leaves && leaves.length === 0 && (
         <NoResults
           height={itemsHeight}
