@@ -48,6 +48,7 @@ Both options support component customization. - [examples](https://github.com/ke
 | `itemsRenderer`        | `Component` | `items.js`             | `Component to replace the default Items component. `            |
 | `forwardIconRenderer`  | `Component` |                        | `Component to replace the default ForwardIcon component. `      |
 | `treeContainerRenderer`| `Component` | `tree_container.js`    | `Component to replace the default TreeContainer component. `    |
+| `customItemsRenderer ` | `Component` |                        | `Component to replace the default Items && inner Item component.`|
 | `markSelectedItem`     | `boolean`   | `false`                | `Toggle to mark selected item. `                                |
 
 <br/>
