@@ -96,7 +96,13 @@ const Tree = props => {
         clearIconRenderer={clearIconRenderer}
       />
       {customItemsRenderer ? (
-        React.cloneElement(customItemsRenderer, { leaves, searchTerm, onClick })
+        React.cloneElement(customItemsRenderer, {
+          leaves,
+          searchTerm,
+          onClick,
+          selectedItem,
+          forwardIconRenderer
+        })
       ) : (
         <Items styles={styles} getStyles={getStyles} height={itemsHeight}>
           {leaves &&
