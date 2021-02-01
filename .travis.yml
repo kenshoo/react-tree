@@ -3,6 +3,9 @@ node_js:
   - "12"
 cache: yarn
 
+git:
+  depth: 100
+
 env:
   global:
     - GIT_NAME="uikenshoo"
