@@ -32,6 +32,7 @@ after_success:
 before_deploy:
   - if [ "$BRANCH" == "master" ]; then
       git checkout master;
+      git fetch --tags;
     fi;
 
 deploy:
