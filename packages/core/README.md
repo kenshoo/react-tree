@@ -4,7 +4,8 @@ React Tree is a straight forward component that allows a user to display and man
 
 The basic tree is built using @emotion/core, and supports both styling and component renderers customizations.
 
-[Examples](https://github.com/kenshoo/react-tree/blob/master/packages/docs/stories/core.stories.js)
+
+Examples can be found - [here](https://github.com/kenshoo/react-tree/blob/master/packages/docs/stories/core.stories.js)
 
  
   <p align="center">

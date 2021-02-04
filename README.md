@@ -22,12 +22,13 @@ Two optional themes are supported when using React Tree:
       <img src="react-tree-demo.gif?raw=true" width="288" />
   </p>
 
-Both options support component customization. - [examples](https://github.com/kenshoo/react-tree/blob/master/packages/docs/stories/core.stories.js)
+Both options support component customization. <br/>
+Examples can be found - [here](https://github.com/kenshoo/react-tree/blob/master/packages/docs/stories/core.stories.js)
 
 <br/>
 
 ### Props
-
+<!-- props-table-start -->
 | Name                   | Type        | Default                | Description                                                     |
 | :------------------    | :---------- | :--------------------- | :-------------------------------------------------------------- |
 | `structure`            | `Array`     | `[]`                   | `Component input - array of leaves along with their ancestors`  |
@@ -50,7 +51,7 @@ Both options support component customization. - [examples](https://github.com/ke
 | `treeContainerRenderer`| `Component` | `tree_container.js`    | `Component to replace the default TreeContainer component. `    |
 | `customItemsRenderer ` | `Component` |                        | `Component to replace the default Items && inner Item component.`|
 | `markSelectedItem`     | `boolean`   | `false`                | `Toggle to mark selected item. `                                |
-
+<!-- props-table-end -->
 <br/>
 
 ## How to Contribute
