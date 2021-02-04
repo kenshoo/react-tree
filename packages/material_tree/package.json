@@ -1,6 +1,6 @@
 {
   "name": "@kenshooui/material-tree",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/material-tree.cjs.js",
   "module": "dist/material-tree.esm.js",
   "scripts": {},
@@ -27,7 +27,7 @@
     "ui",
     "component",
     "frontend",
-    "tree" ,
+    "tree",
     "searchintree",
     "findintree",
     "hierarchical",

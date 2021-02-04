@@ -1,6 +1,6 @@
 {
   "name": "@kenshooui/react-tree",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "main": "dist/react-tree.cjs.js",
   "module": "dist/react-tree.esm.js",
   "repository": "https://github.com/kenshoo/react-tree.git",
@@ -26,7 +26,7 @@
     "ui",
     "component",
     "frontend",
-    "tree" ,
+    "tree",
     "searchintree",
     "findintree",
     "hierarchical",
