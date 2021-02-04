@@ -57,6 +57,24 @@
     "prettier": "prettier --check ./packages/**/*.js --ignore-path .gitignore",
     "prettier:fix": "prettier --check ./packages/**/*.js --ignore-path .gitignore --write",
     "release": "auto shipit"
-  }
+  },
+  "keywords": [
+    "react",
+    "components",
+    "select", "search",
+    "find",
+    "ui",
+    "component",
+    "frontend",
+    "tree" ,
+    "searchintree",
+    "findintree",
+    "hierarchical",
+    "structure",
+    "form",
+    "input",
+    "items",
+    "list"
+  ]
 }
 

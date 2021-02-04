@@ -50,7 +50,7 @@ Examples can be found - [here](https://github.com/kenshoo/react-tree/blob/master
 | `forwardIconRenderer`  | `Component` |                        | `Component to replace the default ForwardIcon component. `      |
 | `treeContainerRenderer`| `Component` | `tree_container.js`    | `Component to replace the default TreeContainer component. `    |
 | `customItemsRenderer ` | `Component` |                        | `Component to replace the default Items && inner Item component.`|
-| `markSelectedItem`     | `boolean`   | `false`                | `Toggle to mark selected item. `                                |
+| `selectedItem`         | `Object`    |                        | `Optional - enables managing selected item. The Object should contain 2 fields: item and leaf, for example: { item: ["a","b","c"], leaf: "c" }`                              |
 <!-- props-table-end -->
 <br/>
 

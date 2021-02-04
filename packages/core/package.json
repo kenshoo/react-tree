@@ -16,5 +16,23 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "classnames": "^2.2.6"
-  }
+  },
+  "keywords": [
+    "react",
+    "components",
+    "select", "search",
+    "find",
+    "ui",
+    "component",
+    "frontend",
+    "tree" ,
+    "searchintree",
+    "findintree",
+    "hierarchical",
+    "structure",
+    "form",
+    "input",
+    "items",
+    "list"
+  ]
 }
