@@ -1,3 +1,15 @@
+# v0.0.22 (Thu Feb 04 2021)
+
+#### 🐛  Bug Fix
+
+- Add keywords to package json files [#158](https://github.com/kenshoo/react-tree/pull/158) ([@liatgo](https://github.com/liatgo))
+
+#### Authors: 1
+
+- Liat Gofshtein ([@liatgo](https://github.com/liatgo))
+
+---
+
 # v0.0.21 (Thu Feb 04 2021)
 
 #### 🐛  Bug Fix

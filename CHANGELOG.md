@@ -2,6 +2,19 @@
 
 #### 🐛  Bug Fix
 
+- `@kenshooui/react-tree@0.0.22`, `@kenshooui/material-tree@0.0.5`
+  - Add keywords to package json files [#158](https://github.com/kenshoo/react-tree/pull/158) ([@liatgo](https://github.com/liatgo))
+
+#### Authors: 1
+
+- Liat Gofshtein ([@liatgo](https://github.com/liatgo))
+
+---
+
+# (Thu Feb 04 2021)
+
+#### 🐛  Bug Fix
+
 - `@kenshooui/react-tree@0.0.21`, `@kenshooui/material-tree@0.0.4`
   - Update readme files + check publish [#157](https://github.com/kenshoo/react-tree/pull/157) ([@liatgo](https://github.com/liatgo))
 
