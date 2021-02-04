@@ -1,3 +1,26 @@
+# v0.0.20 (Thu Feb 04 2021)
+
+#### 🐛  Bug Fix
+
+- Add customItemsRenderer prop [#152](https://github.com/kenshoo/react-tree/pull/152) ([@yegor-babiy](https://github.com/yegor-babiy))
+- Update CHANGELOG.md [skip ci] 
+- Rearrange README files [#151](https://github.com/kenshoo/react-tree/pull/151) ([@liatgo](https://github.com/liatgo) [@liorheber](https://github.com/liorheber))
+- Additions: add clear button in core + add selected item support [#146](https://github.com/kenshoo/react-tree/pull/146) ([@liatgo](https://github.com/liatgo))
+- Update README file [#147](https://github.com/kenshoo/react-tree/pull/147) ([@liatgo](https://github.com/liatgo) [@liorheber](https://github.com/liorheber))
+- Bump independent versions [skip ci]
+
+ - @kenshooui/react-tree@0.0.19
+ - @kenshooui/react-tree-docs@1.0.2
+ - @kenshooui/material-tree@0.0.2 
+
+#### Authors: 3
+
+- Igor Babiy ([@yegor-babiy](https://github.com/yegor-babiy))
+- Liat Gofshtein ([@liatgo](https://github.com/liatgo))
+- Lior Heber ([@liorheber](https://github.com/liorheber))
+
+---
+
 # v0.0.19 (Mon Jan 25 2021)
 
 #### 🐛  Bug Fix
