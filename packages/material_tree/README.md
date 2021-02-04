@@ -5,6 +5,7 @@ Material Tree is an enrichment to React Tree component.
 It is based on basic React Tree logic and allows 
 a user to display and manage a hierarchical structure of items using <b>Material-UI</b> components.
 
+Examples can be found - [here](https://github.com/kenshoo/react-tree/blob/master/packages/docs/stories/core.stories.js)
  
   <p align="center">
       <img src="react-tree-demo.gif?raw=true" width="288" />
