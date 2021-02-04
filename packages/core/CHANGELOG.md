@@ -1,3 +1,15 @@
+# v0.0.21 (Thu Feb 04 2021)
+
+#### 🐛  Bug Fix
+
+- Update readme files + check publish  ([@liatgo](https://github.com/liatgo))
+
+#### Authors: 1
+
+- Liat Gofshtein ([@liatgo](https://github.com/liatgo))
+
+---
+
 # v0.0.20 (Thu Feb 04 2021)
 
 #### 🐛  Bug Fix

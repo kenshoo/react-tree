@@ -2,6 +2,19 @@
 
 #### 🐛  Bug Fix
 
+- `@kenshooui/react-tree@0.0.21`, `@kenshooui/material-tree@0.0.4`
+  - Update readme files + check publish [#157](https://github.com/kenshoo/react-tree/pull/157) ([@liatgo](https://github.com/liatgo))
+
+#### Authors: 1
+
+- Liat Gofshtein ([@liatgo](https://github.com/liatgo))
+
+---
+
+# (Thu Feb 04 2021)
+
+#### 🐛  Bug Fix
+
 - attempt publish release with tags [#156](https://github.com/kenshoo/react-tree/pull/156) ([@liatgo](https://github.com/liatgo) [@yarin-kenshoo](https://github.com/yarin-kenshoo))
 - revert changes in travis.yml [#155](https://github.com/kenshoo/react-tree/pull/155) ([@liatgo](https://github.com/liatgo))
 - fix deploy trial [#154](https://github.com/kenshoo/react-tree/pull/154) ([@liatgo](https://github.com/liatgo))
