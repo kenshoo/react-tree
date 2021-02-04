@@ -1,6 +1,6 @@
 {
   "name": "@kenshooui/material-tree",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/material-tree.cjs.js",
   "module": "dist/material-tree.esm.js",
   "scripts": {},
