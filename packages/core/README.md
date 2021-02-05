@@ -9,7 +9,7 @@ Examples can be found - [here](https://github.com/kenshoo/react-tree/blob/master
 
  
   <p align="center">
-      <img src="core-tree-demo.gif?raw=true" width="288" />
+      <img src="demo.gif?raw=true" width="288" />
   </p>
   
   ### Installation
