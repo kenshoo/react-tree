@@ -12,14 +12,14 @@ Two optional themes are supported when using React Tree:
  Includes all the logic, based on @emotion/core - [README](https://github.com/kenshoo/react-tree/blob/master/packages/core/README.md)
 
   <p align="center">
-      <img src="core-tree-demo.gif?raw=true" width="288" />
+      <img src="/packages/core/demo.gif?raw=true" width="288" />
   </p>
   
  #### Material tree 
  Based on the basic tree logic, using Material-UI components - [README](https://github.com/kenshoo/react-tree/blob/master/packages/material_tree/README.md)
 
   <p align="center">
-      <img src="react-tree-demo.gif?raw=true" width="288" />
+      <img src="/packages/material_tree/demo.gif?raw=true" width="288" />
   </p>
 
 Both options support component customization. <br/>

@@ -8,11 +8,11 @@ a user to display and manage a hierarchical structure of items using <b>Material
 Examples can be found - [here](https://github.com/kenshoo/react-tree/blob/master/packages/docs/stories/core.stories.js)
  
   <p align="center">
-      <img src="react-tree-demo.gif?raw=true" width="288" />
+      <img src="demo.gif?raw=true" width="288" />
   </p>
   
   ### Installation
-  Since Material Rree is based on React Tree< logic, you need to install both <b>@kenshooui/react-tree</b> and <b>@kenshooui/material-tree</b>.
+  Since Material Tree is based on React Tree< logic, you need to install both <b>@kenshooui/react-tree</b> and <b>@kenshooui/material-tree</b>.
   
   Dependencies to <b>@material-ui/core</b> and <b>@material-ui/icons</b> are needed only if they don't exist in your project.
   
