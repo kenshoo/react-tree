@@ -1,3 +1,15 @@
+# v0.0.6 (Fri Feb 05 2021)
+
+#### 🐛  Bug Fix
+
+- Standardize demo gifs and remove from npm [#159](https://github.com/kenshoo/react-tree/pull/159) ([@liorheber](https://github.com/liorheber))
+
+#### Authors: 1
+
+- Lior Heber ([@liorheber](https://github.com/liorheber))
+
+---
+
 # v0.0.5 (Thu Feb 04 2021)
 
 #### 🐛  Bug Fix
