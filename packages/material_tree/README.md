@@ -8,7 +8,7 @@ a user to display and manage a hierarchical structure of items using <b>Material
 Examples can be found - [here](https://github.com/kenshoo/react-tree/blob/master/packages/docs/stories/core.stories.js)
  
   <p align="center">
-      <img src="demo.gif?raw=true" width="288" />
+      <img src="https://grid.kenshoo.com/resources-frontend/latest/react-tree/material/demo.gif" width="288" />
   </p>
   
   ### Installation
