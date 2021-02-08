@@ -1,3 +1,15 @@
+# v0.0.7 (Mon Feb 08 2021)
+
+#### 🐛  Bug Fix
+
+- Use gifs from resources-frontend [#160](https://github.com/kenshoo/react-tree/pull/160) ([@liatgo](https://github.com/liatgo))
+
+#### Authors: 1
+
+- Liat Gofshtein ([@liatgo](https://github.com/liatgo))
+
+---
+
 # v0.0.6 (Fri Feb 05 2021)
 
 #### 🐛  Bug Fix

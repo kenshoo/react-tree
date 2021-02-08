@@ -1,3 +1,16 @@
+# (Mon Feb 08 2021)
+
+#### 🐛  Bug Fix
+
+- `@kenshooui/react-tree@0.0.24`, `@kenshooui/material-tree@0.0.7`
+  - Use gifs from resources-frontend [#160](https://github.com/kenshoo/react-tree/pull/160) ([@liatgo](https://github.com/liatgo))
+
+#### Authors: 1
+
+- Liat Gofshtein ([@liatgo](https://github.com/liatgo))
+
+---
+
 # (Fri Feb 05 2021)
 
 #### 🐛  Bug Fix
