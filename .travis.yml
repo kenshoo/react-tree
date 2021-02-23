@@ -28,6 +28,7 @@ script:
 
 after_success:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  -  yarn build-storybook
 
 before_deploy:
   - if [ "$BRANCH" == "master" ]; then
@@ -41,3 +42,10 @@ deploy:
     skip-cleanup: true
     on:
       all_branches: true
+  - provider: pages
+    local-dir: "./storybook-static"
+    skip-cleanup: true
+    github-token: $GH_TOKEN
+    keep-history: true
+    on:
+      branch: master

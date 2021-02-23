@@ -30,6 +30,12 @@ Examples can be found - [here](https://github.com/kenshoo/react-tree/blob/master
  yarn add @material-ui/core @material-ui/icons
 ```
 
+### Technologies
+
+* React 16
+* @material-ui/core 
+* @material-ui/icons 
+
  ### How to use
  <!-- example -->
 

@@ -24,6 +24,11 @@ Examples can be found - [here](https://github.com/kenshoo/react-tree/blob/master
  yarn add @kenshooui/react-tree
 ```
 
+### Technologies
+
+* React 16
+* @emotion/core
+
  ### How to use
  <!-- example -->
 
