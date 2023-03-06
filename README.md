@@ -66,3 +66,4 @@ Examples can be found - [here](https://github.com/kenshoo/react-tree/blob/master
 ## Credit
 
 Styling patterns were taken from react-select - [README](https://github.com/JedWatson/react-select/blob/master/README.md)
+
